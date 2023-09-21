@@ -455,11 +455,17 @@
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
+      \ifthenelse{\isundefined{\@pronouns}}%
+        {}%
+        {%
+          \faComment\acvHeaderIconSep\@pronouns%
+          \setbool{isstart}{false}%
+        }%
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faMobile\acvHeaderIconSep\@mobile%
-          \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
