@@ -19,7 +19,7 @@ orcid: 0000-0001-6067-1349
 #researchgate: Tanya-Strydom
 #aboutme: |
 date: "`r format(Sys.time(), '%B %Y')`"
-csl: "../csl/apa7-cv.csl"
+csl: "../csl/apa.csl"
 nocite: "@*"
 headcolor: 529FA8 # use love symbol #2
 knit: (function(inputFile, encoding) {
