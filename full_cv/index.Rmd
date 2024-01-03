@@ -6,6 +6,7 @@ surname: Strydom
 #headcolor: 414141
 #qualifications: "BSc. (Hons), MSc."
 position: "PhD Candidate"
+pronouns: "she/they"
 address: "Département de sciences biologiques, Université de Montréal - Campus MIL, 1375 Ave.Thérèse-Lavoie-Roux, Montréal, QC H2V 0B3, Canada"
 #phone: +46 76 567 8299
 profilepic: LogoNetwork.png

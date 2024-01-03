@@ -276,6 +276,10 @@
 % Usage: \name{<position>}
 \newcommand*{\position}[1]{\def\@position{#1}}
 
+% Defines writer's pronouns (optional)
+% Usage: \pronouns{<pronouns>}
+\newcommand*{\pronouns}[1]{\def\@pronouns{#1}}
+
 % Defines writer's mobile (optional)
 % Usage: \mobile{<mobile number>}
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
@@ -537,13 +541,13 @@
           {}%
           {%
             \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+            \newline
             \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
           }%
         \ifthenelse{\isundefined{\@twitter}}%
           {}%
           {%
             \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-            \newline
             \href{https://ecoevo.social/@\@twitter}{\faMastodon\acvHeaderIconSep\@twitter}%
           }%
         \ifthenelse{\isundefined{\@xing}}%
