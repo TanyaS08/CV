@@ -31,10 +31,8 @@ knit: (function(inputFile, encoding) {
     output_file = "cv",
      encoding = encoding)
      })
-bibliography:
-  journals: "../bib/journal.bib"
-  review: "../bib/under_review.bib"
-  popular: "../bib/popular_articles.bib"
+pandoc_args:
+#    - --lua-filter="../lua/strong.lua"
 header-includes:
   - \usepackage{fontawesome5}
 ---
@@ -151,14 +149,16 @@ tribble(
 \vspace{\baselineskip}
 ## **Publications**
 
-::: {#refs-journals}
-:::
+```{r}
+vitae::bibliography_entries("../bib/journal.bib")
+```
 
 \vspace{\baselineskip}
 ## **Preprints**
 
-::: {#refs-review}
-:::
+```{r}
+bibliography_entries("../bib/under_review.bib")
+```
 
 <!--- 
 \newpage
@@ -264,7 +264,8 @@ tribble(
 \vspace{\baselineskip}
 ## **Popular Articles**
 
-::: {#refs-popular}
-:::
+```{r}
+bibliography_entries("../bib/popular_articles.bib")
+```
 
 <!--chapter:end:CV.Rmd-->
