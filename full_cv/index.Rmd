@@ -65,14 +65,14 @@ computational ecology; functional traits; ecological networks; species interacti
 library(tibble)
 tribble(
   ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
-  "Doctor of Philosophy: Biological Sciences","Advisor: T. Poisot, PhD", "2020 - Present", "Université de Montréal", "Montréal, Canada",
-  "Doctor of Philosophy: Biological Sciences","Thesis: Decoding Ecological Networks (in terms of the information from within)", "2020 - Present", "Université de Montréal", "Montréal, Canada",
-  "Master of Science: Ecology and Biodiversity","Advisor: K. Hylander, PhD", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
-  "Master of Science: Ecology and Biodiversity","Thesis: Declines and increases in northern and southern plant populations after changes in the microclimate", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
-  "Bachelor of Science (Honours): Plant Sciences","Advisor: P.C. le Roux, PhD", "2017", "University of Pretoria", "Pretoria, South Africa",
-  "Bachelor of Science (Honours): Plant Sciences","Thesis: Bush encroachment in South Africa’s montane grasslands: the impact of \\textit{Leucosidea sericea} on microclimate and vegetation", "2017",
+  "Doctor of Philosophy in Biological Sciences","Advisor: T. Poisot, PhD", "2020 - Present", "Université de Montréal", "Montréal, Canada",
+  "Doctor of Philosophy in Biological Sciences","Thesis: Tools 'O the Times: Understanding the common properties of species interaction networks across space", "2020 - Present", "Université de Montréal", "Montréal, Canada",
+  "Master of Science in Ecology and Biodiversity","Advisor: K. Hylander, PhD", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
+  "Master of Science in Ecology and Biodiversity","Thesis: Declines and increases in northern and southern plant populations after changes in the microclimate", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
+  "Bachelor of Science (Honours) in Plant Sciences","Advisor: P.C. le Roux, PhD", "2017", "University of Pretoria", "Pretoria, South Africa",
+  "Bachelor of Science (Honours) in Plant Sciences","Thesis: Bush encroachment in South Africa’s montane grasslands: the impact of \\textit{Leucosidea sericea} on microclimate and vegetation", "2017",
 "University of Pretoria", "Pretoria, South Africa",
-  "Bachelor of Science: Ecology", NA, "2014-16", "University of Pretoria", "Pretoria, South Africa"
+  "Bachelor of Science in Ecology", NA, "2014-16", "University of Pretoria", "Pretoria, South Africa"
 ) %>%
   detailed_entries(with=Degree, when=Year, what=Institution, where=Where, why=Advisor,
                    .protect = FALSE)
