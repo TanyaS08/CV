@@ -7,7 +7,7 @@ surname: Strydom
 #qualifications: "BSc. (Hons), MSc."
 position: "PhD Candidate"
 pronouns: "she/they"
-address: "Département de sciences biologiques, Université de Montréal - Campus MIL, 1375 Ave.Thérèse-Lavoie-Roux, Montréal, QC H2V 0B3, Canada"
+address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
 #phone: +46 76 567 8299
 profilepic: LogoNetwork.png
 www: "tanyadoesscience.com"
@@ -56,11 +56,24 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-# Research Interests
+# \faIcon{lightbulb} Research Interests
 
 computational ecology; functional traits; ecological networks; species interactions; FAIR and open science
 
-# Education
+# \faIcon{briefcase} Professional Experience
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+library(tibble)
+tribble(
+  ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
+  "Postdoctoral Researcher","Advisor: A.P. Beckerman, PhD", "2024 - Present", "University of Sheffield", "Sheffield, UK",
+  "Postdoctoral Researcher","Part of the Community And Structural Collapse During Mass Extinctions (CASCaDE) research team", "2024 - Present", "University of Sheffield", "Sheffield, UK"
+) %>%
+  detailed_entries(with=Degree, when=Year, what=Institution, where=Where, why=Advisor,
+                   .protect = FALSE)
+```
+
+# \faIcon{graduation-cap} Education
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 library(tibble)
@@ -79,7 +92,7 @@ tribble(
                    .protect = FALSE)
 ```
 
-# Fellowships and Internships
+# \faIcon{chalkboard} Fellowships and Internships
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 
@@ -102,7 +115,9 @@ tribble(
 
 ```
 
-# Funding and Awards
+\newpage
+
+# \faIcon{award} Funding and Awards
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 
@@ -120,7 +135,7 @@ tribble(
 
 ```
 
-# Working Groups and International Collaboration
+# \faIcon{users} Working Groups and International Collaboration
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 tribble(
@@ -141,7 +156,7 @@ tribble(
 ```
 
 
-# Publications
+# \faIcon{file-alt} Publications
 
 \textbf{\textsuperscript{*}} Indicates co-lead author
 
@@ -165,7 +180,7 @@ bibliography_entries("../bib/under_review.bib")
 \newpage
 --->
 
-# Presentations
+# \faIcon{chalkboard-teacher} Presentations
 \vspace{\baselineskip}
 ## **Invited talks**
 
@@ -243,9 +258,10 @@ tribble(
 ```
 
 --->
+
 \newpage
 
-# Community Engagement
+# \faIcon{comments} Community Engagement
 \vspace{\baselineskip}
 ## **Science Communication**
 
