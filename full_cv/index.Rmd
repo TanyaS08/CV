@@ -5,13 +5,13 @@ name: Tanya
 surname: Strydom
 #headcolor: 414141
 #qualifications: "BSc. (Hons), MSc."
-position: "PhD Candidate"
+position: "Postdoctoral Researcher"
 pronouns: "she/they"
 address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
 #phone: +46 76 567 8299
 profilepic: LogoNetwork.png
 www: "tanyadoesscience.com"
-email: "tanya.strydom@umontreal.ca"
+email: "t.strydom@sheffield.ac.uk"
 twitter: TanyaS08
 github: TanyaS08
 orcid: 0000-0001-6067-1349
