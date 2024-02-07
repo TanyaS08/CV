@@ -66,7 +66,7 @@ computational ecology; functional traits; ecological networks; species interacti
 library(tibble)
 tribble(
   ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
-  "Postdoctoral Researcher","Advisor: A.P. Beckerman, PhD", "2024 - Present", "University of Sheffield", "Sheffield, UK",
+  "Postdoctoral Researcher","Mentor: A.P. Beckerman, PhD", "2024 - Present", "University of Sheffield", "Sheffield, UK",
   "Postdoctoral Researcher","Part of the Community And Structural Collapse During Mass Extinctions (CASCaDE) research team", "2024 - Present", "University of Sheffield", "Sheffield, UK"
 ) %>%
   detailed_entries(with=Degree, when=Year, what=Institution, where=Where, why=Advisor,
