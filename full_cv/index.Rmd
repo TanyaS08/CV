@@ -79,8 +79,8 @@ tribble(
 library(tibble)
 tribble(
   ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
-  "Doctor of Philosophy in Biological Sciences","Advisor: T. Poisot, PhD", "2020 - Present", "Université de Montréal", "Montréal, Canada",
-  "Doctor of Philosophy in Biological Sciences","Thesis: Tools 'O the Times: Understanding the common properties of species interaction networks across space", "2020 - Present", "Université de Montréal", "Montréal, Canada",
+  "Doctor of Philosophy in Biological Sciences","Advisor: T. Poisot, PhD", "2020-23", "Université de Montréal", "Montréal, Canada",
+  "Doctor of Philosophy in Biological Sciences","Thesis: Tools 'O the Times: Understanding the common properties of species interaction networks across space", "2020-23", "Université de Montréal", "Montréal, Canada",
   "Master of Science in Ecology and Biodiversity","Advisor: K. Hylander, PhD", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
   "Master of Science in Ecology and Biodiversity","Thesis: Declines and increases in northern and southern plant populations after changes in the microclimate", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
   "Bachelor of Science (Honours) in Plant Sciences","Advisor: P.C. le Roux, PhD", "2017", "University of Pretoria", "Pretoria, South Africa",
@@ -99,7 +99,7 @@ tribble(
 tribble(
   ~Institution, ~Title, ~Year, ~Job,
     
-  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021 - present", NA,
+  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021-23", NA,
   # LIVING DATA
   "Canadian Institute of Ecology and Evolution, Birds Canada", "Living Data Internship", "2022", "Data archiving for the Piping Plovers conservation pjoject",
   'University of Bergen',  "UiB Internship", "2020", "Website development for the Plants Functional Courses website. This included content creation as well as some front end development",
