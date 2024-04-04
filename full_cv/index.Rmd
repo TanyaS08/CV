@@ -173,7 +173,7 @@ vitae::bibliography_entries("../bib/journal.bib")
 ## **Preprints**
 
 ```{r}
-bibliography_entries("../bib/under_review.bib")
+bibliography_entries("../bib/preprint.bib")
 ```
 
 <!--- 
