@@ -26,10 +26,6 @@ headcolor: 529FA8 # use love symbol #2
 knit: (function(inputFile, encoding) {
      rmarkdown::render(inputFile,
     output_file = "cv",
-     encoding = encoding,
-     output_dir = "~/Users/tanyastrydom/Library/CloudDocs/Documents/TanyaDoesScience/static/files");
-     rmarkdown::render(inputFile,
-    output_file = "cv",
      encoding = encoding)
      })
 pandoc_args:
