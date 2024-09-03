@@ -12,7 +12,7 @@ address: "Ecology and Evolutionary Biology, School of Biosciences, University of
 profilepic: LogoNetwork.png
 www: "tanyadoesscience.com"
 email: "t.strydom@sheffield.ac.uk"
-twitter: tanyadoesscience.bsky.social
+twitter: TanyaS08
 github: TanyaS08
 orcid: 0000-0001-6067-1349
 #publons: ABH-3144-2020
