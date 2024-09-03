@@ -28,10 +28,8 @@ knit: (function(inputFile, encoding) {
     output_file = "cv",
      encoding = encoding)
      })
-pandoc_args:
-#    - --lua-filter="../lua/strong.lua"
-header-includes:
-  - \usepackage{fontawesome5}
+#header-includes:
+#  - \usepackage{fontawesome5}
 ---
 
 ```{r setup, include=FALSE, cache = FALSE}
@@ -52,11 +50,11 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-# \faIcon{lightbulb} Research Interests
+# Research Interests
 
 computational ecology; functional traits; ecological networks; species interactions; FAIR and open science
 
-# \faIcon{briefcase} Professional Experience
+# Professional Experience
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 library(tibble)
@@ -69,7 +67,7 @@ tribble(
                    .protect = FALSE)
 ```
 
-# \faIcon{graduation-cap} Education
+# Education
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 library(tibble)
@@ -88,7 +86,7 @@ tribble(
                    .protect = FALSE)
 ```
 
-# \faIcon{chalkboard} Fellowships and Internships
+# Fellowships and Internships
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 
@@ -113,7 +111,7 @@ tribble(
 
 \newpage
 
-# \faIcon{award} Funding and Awards
+# Funding and Awards
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 
@@ -131,7 +129,7 @@ tribble(
 
 ```
 
-# \faIcon{users} Working Groups and International Collaboration
+# Working Groups and International Collaboration
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 tribble(
@@ -152,7 +150,7 @@ tribble(
 ```
 
 
-# \faIcon{file-alt} Publications
+# Publications
 
 \textbf{\textsuperscript{*}} Indicates co-lead author
 
@@ -174,7 +172,7 @@ bibliography_entries("../bib/preprint.bib")
 \newpage
 --->
 
-# \faIcon{chalkboard-teacher} Presentations
+# Presentations
 \vspace{\baselineskip}
 ## **Invited talks**
 
@@ -257,7 +255,7 @@ tribble(
 \newpage
 --->
 
-# \faIcon{comments} Community Engagement
+# Community Engagement
 \vspace{\baselineskip}
 ## **Science Communication**
 
