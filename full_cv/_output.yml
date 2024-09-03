@@ -3,6 +3,7 @@
 vitae::awesomecv:
   fig_caption: yes
   keep_tex: yes
+  page_total: true
 #  keep_md: yes
 #  citation_package: "none"
 #  includes:
