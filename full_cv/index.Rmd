@@ -28,8 +28,8 @@ knit: (function(inputFile, encoding) {
     output_file = "cv",
      encoding = encoding)
      })
-#header-includes:
-#  - \usepackage{fontawesome5}
+header-includes:
+  - \usepackage{fontawesome5}
 ---
 
 ```{r setup, include=FALSE, cache = FALSE}
@@ -50,11 +50,11 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-# Research Interests
+# \faIcon{lightbulb} Research Interests
 
 computational ecology; functional traits; ecological networks; species interactions; FAIR and open science
 
-# Professional Experience
+# \faIcon{briefcase} Professional Experience
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 library(tibble)
@@ -67,7 +67,7 @@ tribble(
                    .protect = FALSE)
 ```
 
-# Education
+# \faIcon{graduation-cap} Education
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 library(tibble)
@@ -86,7 +86,7 @@ tribble(
                    .protect = FALSE)
 ```
 
-# Fellowships and Internships
+# \faIcon{chalkboard} Fellowships and Internships
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 
@@ -111,7 +111,7 @@ tribble(
 
 \newpage
 
-# Funding and Awards
+# \faIcon{award} Funding and Awards
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 
@@ -129,7 +129,7 @@ tribble(
 
 ```
 
-# Working Groups and International Collaboration
+# \faIcon{users} Working Groups and International Collaboration
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 tribble(
@@ -150,7 +150,7 @@ tribble(
 ```
 
 
-# Publications
+# \faIcon{file-alt} Publications
 
 \textbf{\textsuperscript{*}} Indicates co-lead author
 
@@ -172,7 +172,7 @@ bibliography_entries("../bib/preprint.bib")
 \newpage
 --->
 
-# Presentations
+# \faIcon{chalkboard-teacher} Presentations
 \vspace{\baselineskip}
 ## **Invited talks**
 
@@ -255,7 +255,7 @@ tribble(
 \newpage
 --->
 
-# Community Engagement
+# \faIcon{comments} Community Engagement
 \vspace{\baselineskip}
 ## **Science Communication**
 
