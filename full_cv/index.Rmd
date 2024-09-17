@@ -30,6 +30,8 @@ knit: (function(inputFile, encoding) {
      })
 header-includes:
   - \usepackage{fontawesome5}
+  - \usepackage{graphicx}
+  - \usepackage{float}
 ---
 
 ```{r setup, include=FALSE, cache = FALSE}
@@ -53,6 +55,10 @@ library(fontawesome)
 # \faIcon{lightbulb} Research Interests
 
 computational ecology; functional traits; ecological networks; species interactions; FAIR and open science
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{interests.jpeg}
+\end{figure}
 
 # \faIcon{briefcase} Professional Experience
 
@@ -86,31 +92,6 @@ tribble(
                    .protect = FALSE)
 ```
 
-# \faIcon{chalkboard} Fellowships and Internships
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~Institution, ~Title, ~Year, ~Job,
-    
-  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021-23", NA,
-  # LIVING DATA
-  "Canadian Institute of Ecology and Evolution, Birds Canada", "Living Data Internship", "2022", "Data archiving for the Piping Plovers conservation pjoject",
-  'University of Bergen',  "UiB Internship", "2020", "Website development for the Plants Functional Courses website. This included content creation as well as some front end development",
-  'University of Pretoria',  "3rd year Undergraduate Mentorship Program", "2016", "Worked as an assistant within the M. Robertson lab. This included the sorting and identification of pitfall trap samples as well as extracting information from databases"
-) %>%
-  detailed_entries(
-    what = Institution,
-    with = Title,
-    when = Year,
-    why = Job,
-    .protect = FALSE
-  )
-
-```
-
-\newpage
-
 # \faIcon{award} Funding and Awards
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
@@ -129,27 +110,7 @@ tribble(
 
 ```
 
-# \faIcon{users} Working Groups and International Collaboration
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE}
-tribble(
-  ~ Project, ~Supervisor, ~Description,  ~ Year,
-  # Macro-Micro
-  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: G. Dansereau, F. Banville, M. Catchen, and T. Strydom",NA, "2022",
-  # Macro-Micro
-  "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
-  # CAN metaweb
-  "Canadian metaweb construction working group","PIs: T. Poisot and L.J. Pollock",NA, "2021",
-  # Network pred synth
-  "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock",NA, "2020",
-  #PFTC5
-  "Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020") %>%
-  detailed_entries(with=Project, why=Description, when=Year, what = Supervisor)
-
-
-```
-
-
+\newpage
 # \faIcon{file-alt} Publications
 
 \textbf{\textsuperscript{*}} Indicates co-lead author
@@ -172,7 +133,70 @@ bibliography_entries("../bib/preprint.bib")
 \newpage
 --->
 
+
+# \faIcon{users} Working Groups
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE}
+tribble(
+  ~ Project, ~Supervisor, ~Description,  ~ Year,
+  # Macro-Micro
+  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: G. Dansereau, F. Banville, M. Catchen, and T. Strydom",NA, "2022",
+  # Macro-Micro
+  "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
+  # CAN metaweb
+  "Canadian metaweb construction working group","PIs: T. Poisot and L.J. Pollock",NA, "2021",
+  # Network pred synth
+  "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock",NA, "2020",
+  #PFTC5
+  "Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020") %>%
+  detailed_entries(with=Project, why=Description, when=Year, what = Supervisor)
+
+
+```
+
+<!--- 
+# \faIcon{chalkboard} Fellowships and Internships
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~Institution, ~Title, ~Year, ~Job,
+    
+  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021-23", NA,
+  # LIVING DATA
+  "Canadian Institute of Ecology and Evolution, Birds Canada", "Living Data Internship", "2022", "Data archiving for the Piping Plovers conservation pjoject",
+  'University of Bergen',  "UiB Internship", "2020", "Website development for the Plants Functional Courses website. This included content creation as well as some front end development",
+  'University of Pretoria',  "3rd year Undergraduate Mentorship Program", "2016", "Worked as an assistant within the M. Robertson lab. This included the sorting and identification of pitfall trap samples as well as extracting information from databases"
+) %>%
+  detailed_entries(
+    what = Institution,
+    with = Title,
+    when = Year,
+    why = Job,
+    .protect = FALSE
+  )
+
+```
+--->
+
 # \faIcon{chalkboard-teacher} Presentations
+
+\vspace{\baselineskip}
+
+## **Workshops and Organised Sessions**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~ Year, ~ Conference, ~ Who,
+  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","Francis Banville, Gabriel Dansereau, \\textbf{Tanya Strydom}",
+  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","Gracielle Higino, Mickey Boakye, Norma Forero, \\textbf{Tanya Strydom}"
+) %>%
+  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
+    .protect = FALSE)
+
+```
+
 \vspace{\baselineskip}
 ## **Invited talks**
 
@@ -212,22 +236,6 @@ tribble(
   "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
   #QCBS POSTER
   "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
-) %>%
-  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
-    .protect = FALSE)
-
-```
-
-\vspace{\baselineskip}
-\newpage
-## **Workshops and Organised Sessions**
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~ Title, ~ Year, ~ Conference, ~ Who,
-  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","Francis Banville, Gabriel Dansereau, \\textbf{Tanya Strydom}",
-  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","Gracielle Higino, Mickey Boakye, Norma Forero, \\textbf{Tanya Strydom}"
 ) %>%
   detailed_entries(with=Title, when=Year, what=Who, where=Conference,
     .protect = FALSE)
