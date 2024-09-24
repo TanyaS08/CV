@@ -22,7 +22,7 @@ orcid: 0000-0001-6067-1349
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: "../csl/apa.csl"
 nocite: "@*"
-headcolor: 529FA8 # use love symbol #2
+headcolor: 04ADBF
 knit: (function(inputFile, encoding) {
      rmarkdown::render(inputFile,
     output_file = "cv",
@@ -54,10 +54,8 @@ library(fontawesome)
 
 # \faIcon{lightbulb} Research Interests
 
-computational ecology; functional traits; ecological networks; species interactions; FAIR and open science
-
 \begin{figure}[H]
-  \includegraphics[width=\linewidth]{interests.jpeg}
+  \includegraphics[width=\linewidth]{interests.png}
 \end{figure}
 
 # \faIcon{briefcase} Professional Experience
