@@ -137,7 +137,7 @@ bibliography_entries("../bib/preprint.bib")
 tribble(
   ~ Project, ~Supervisor, ~Description,  ~ Year,
   # Macro-Micro
-  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: G. Dansereau, F. Banville, M. Catchen, and T. Strydom",NA, "2022",
+  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and \\textbf{T. Strydom}",NA, "2022",
   # Macro-Micro
   "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
   # CAN metaweb
@@ -146,7 +146,8 @@ tribble(
   "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock",NA, "2020",
   #PFTC5
   "Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020") %>%
-  detailed_entries(with=Project, why=Description, when=Year, what = Supervisor)
+  detailed_entries(with=Project, why=Description, when=Year, what = Supervisor,
+    .protect = FALSE)
 
 
 ```
