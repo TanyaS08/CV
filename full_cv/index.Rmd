@@ -52,11 +52,9 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-# \faIcon{lightbulb} Research Interests
+# \faIcon{lightbulb} Research Profile
 
-\begin{figure}[H]
-  \includegraphics[width=\linewidth]{interests.png}
-\end{figure}
+Food Webs; Method Development, Trait Ecology, Open and FAIR Science
 
 # \faIcon{briefcase} Professional Experience
 
@@ -258,10 +256,7 @@ tribble(
 
 --->
 
-<!--- 
 \newpage
---->
-
 # \faIcon{comments} Community Engagement
 \vspace{\baselineskip}
 ## **Science Communication**
