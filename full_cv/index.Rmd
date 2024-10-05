@@ -9,7 +9,7 @@ position: "Postdoctoral Researcher"
 pronouns: "she/they"
 address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
 #phone: +46 76 567 8299
-profilepic: LogoNetwork.png
+profilepic: "../assets/logo.png
 www: "tanyadoesscience.com"
 email: "t.strydom@sheffield.ac.uk"
 twitter: TanyaS08
