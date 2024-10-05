@@ -20,8 +20,6 @@ c_nprp <- sum(subset(df, Kind != "Peer-reviewed paper")[, "Current.number.of.cit
 o_oa <- nrow(subset(subset(df, Open.access == 1), Year > current_yr - 5))
 o_t5 <- nrow(subset(df, Year > current_yr - 5))
 
-df %>% pull(Current.number.of.citations)
-
 a <- sort(df$Current.number.of.citations, decreasing = TRUE)
 h <- tail(which(a >= seq_along(a)), 1)
 
@@ -44,22 +42,22 @@ arc_df <- tribble(
          xtext = (110 * sin(angle)))
 
 ggplot(arc_df) +
-    geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
-    linewidth = 2) +
-    geom_polygon(aes(x = xmin, y = ymax),
-                 fill = NA,
-                 colour = 'black') +
-    geom_polygon(aes(x = x,
-                     y = y),
-                 fill = 'pink',
-                 colour = 'pink',
-                 alpha = 0.5) +
-    geom_point(aes(x = x, y = y),
-    size = 8,
-    colour = 'pink') +
-    geom_text(aes(x = xtext,
-           y = ytext,
-           label = metric)) +
-    coord_cartesian(xlim = c(-120, 120),
-    ylim = c(-120, 120)) +
-    theme_void()
+  geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
+               linewidth = 2) +
+  geom_polygon(aes(x = xmin, y = ymax),
+               fill = NA,
+               colour = 'black') +
+  geom_polygon(aes(x = x,
+                   y = y),
+               fill = 'pink',
+               colour = 'pink',
+               alpha = 0.5) +
+  geom_point(aes(x = x, y = y),
+             size = 8,
+             colour = 'pink') +
+  geom_text(aes(x = xtext,
+                y = ytext,
+                label = metric)) +
+  coord_cartesian(xlim = c(-120, 120),
+                  ylim = c(-120, 120)) +
+  theme_void()
