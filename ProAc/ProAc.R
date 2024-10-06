@@ -1,8 +1,9 @@
 # libraries
+library(colorspace)
 library(REdaS)
 library(tidyverse)
 
-df <- read.csv("ProAc/publications.csv")
+df <- read.csv("../ProAc/publications.csv")
 
 current_yr <- as.numeric(format(Sys.Date(), "%Y"))
 max_yr <- min(df$Year)
@@ -24,13 +25,13 @@ a <- sort(df$Current.number.of.citations, decreasing = TRUE)
 h <- tail(which(a >= seq_along(a)), 1)
 
 arc_df <- tribble(
-  ~metric, ~min, ~value, ~place,
-  "Impact", 0, ifelse(c_prp / o_prp > 20, 100, ((c_prp / o_prp) / 20) * 100), 0,
-  "Achievements", 0, ifelse(h >= 30, 100, (h / 30) * 100), 1,
-  "Autonomy", 0, ifelse(c_aut / c_total >= 0.50, 100, (c_prp / c_total) * 100), 2,
-  "Self-reliance", 0, (c_fa / c_total) * 100, 3,
-  "Wider contribution", 0, ifelse(c_nprp / c_total >= 0.25, 100, (c_prp / c_total) * 100), 4,
-  "Openness", 0, (o_oa / o_t5) * 100, 5) %>%
+  ~metric, ~min, ~value, ~place, ~text,
+  "Impact", 0, ifelse(c_prp / o_prp > 20, 100, ((c_prp / o_prp) / 20) * 100), 0, "Annual citations per peer-reiewed publication",
+  "Achievements", 0, ifelse(h >= 30, 100, (h / 30) * 100), 5, "Publication output and impact",
+  "Autonomy", 0, ifelse(c_aut / c_total >= 0.50, 100, (c_prp / c_total) * 100), 4, "% of publications exluding PhD supervisor",
+  "Self-reliance", 0, (c_fa / c_total) * 100, 3, "% of first-authored citations",
+  "Wider contribution", 0, ifelse(c_nprp / c_total >= 0.25, 100, (c_prp / c_total) * 100), 2, "% on non-peer-reviewed publication citations",
+  "Openness", 0, (o_oa / o_t5) * 100, 1, "% of open-access output during past 5 years") %>%
   mutate(angle = deg2rad(60 * place)) %>%
   mutate(x = (value * sin(angle)),
          xmin = (100 * sin(angle)),
@@ -39,7 +40,11 @@ arc_df <- tribble(
          ysegment = (105 * cos(angle)),
          xsegment = (105 * sin(angle)),
          ytext = (110 * cos(angle)),
-         xtext = (110 * sin(angle)))
+         xtext = (110 * sin(angle))) %>% 
+  arrange(place)  %>% 
+  mutate(hjust = c("middle", "left", "left", "middle", "right", "right"),
+         ynudge = case_when(metric %in% c("Impact", "Achievements", "Openness") ~ ytext+10,
+                            .default = ytext-10))
 
 ggplot(arc_df) +
   geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
@@ -53,11 +58,29 @@ ggplot(arc_df) +
                colour = 'pink',
                alpha = 0.5) +
   geom_point(aes(x = x, y = y),
-             size = 8,
+             size = 12,
              colour = 'pink') +
+  geom_text(aes(x = x, y = y,
+                label = round(value, 0))) +
   geom_text(aes(x = xtext,
                 y = ytext,
-                label = metric)) +
-  coord_cartesian(xlim = c(-120, 120),
+                label = metric,
+                hjust = hjust),
+            size = 9,
+            fontface = "bold",
+            colour = "#04ADBF") +
+  geom_text(aes(x = xtext,
+                y = ynudge,
+                label = text,
+                hjust = hjust),
+            vjust = "outward",
+            colour = lighten("#04ADBF", 0.3)) +
+  coord_cartesian(xlim = c(-200, 200),
                   ylim = c(-120, 120)) +
+  labs(caption = "Crameri, Fabio (2023), Multi-metric academic profiling with ProAc (1.0.0),: https://doi.org/10.5281/zenodo.4899015") +
   theme_void()
+
+ggsave("../assets/proac.png",
+       width = 4200,
+       height = 2300,
+       units = "px")
