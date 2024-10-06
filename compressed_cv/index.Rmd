@@ -112,10 +112,6 @@ tribble(
 # \faIcon{file-alt} Academic profile
 
 \begin{figure}[H]
-  \includegraphics[width=\linewidth]{ProAc.png}
-\end{figure}
-
-\begin{figure}[H]
   \includegraphics[width=\linewidth]{../assets/proac.png}
 \end{figure}
 
@@ -206,6 +202,7 @@ tribble(
 ```
 
 \vspace{\baselineskip}
+\newpage
 ## **Invited talks**
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
