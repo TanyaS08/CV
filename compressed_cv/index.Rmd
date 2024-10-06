@@ -1,0 +1,296 @@
+---
+#citeproc: no
+graphics: yes
+name: Tanya
+surname: Strydom
+#headcolor: 414141
+#qualifications: "BSc. (Hons), MSc."
+position: "Postdoctoral Researcher"
+pronouns: "she/they"
+address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
+#phone: +46 76 567 8299
+profilepic: "../assets/logo.png"
+www: "tanyadoesscience.com"
+email: "t.strydom@sheffield.ac.uk"
+twitter: TanyaS08
+github: TanyaS08
+orcid: 0000-0001-6067-1349
+#publons: ABH-3144-2020
+#googlescholar: AkDd5u8AAAAJ
+#researchgate: Tanya-Strydom
+#aboutme: |
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: "../csl/apa.csl"
+nocite: "@*"
+headcolor: 04ADBF
+knit: (function(inputFile, encoding) {
+     rmarkdown::render(inputFile,
+    output_file = "cv",
+     encoding = encoding)
+     })
+header-includes:
+  - \usepackage{fontawesome5}
+  - \usepackage{graphicx}
+  - \usepackage{float}
+---
+
+```{r setup, include=FALSE, cache = FALSE}
+library(knitr)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+library(RefManageR)
+RefManageR::BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           sorting = "",
+           cite.style = "alphabetic",
+           style = "markdown",
+#           hyperlink = TRUE,
+           dashed = FALSE)
+
+library(vitae)
+library(tidyverse)
+library(fontawesome)
+
+source("../ProAc/ProAc.R")
+```
+
+# \faIcon{lightbulb} Research Profile
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{../assets/interests.png}
+\end{figure}
+
+# \faIcon{briefcase} Professional Experience
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Postdoctoral Researcher", "2024 - Present", "University of Sheffield", "Sheffield, UK"
+) %>%
+  detailed_entries(with=Degree, when=Year, what=Institution, where=Where,
+                   .protect = FALSE)
+```
+
+# \faIcon{graduation-cap} Education
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Doctor of Philosophy in Biological Sciences", "2020-24", "Université de Montréal", "Montréal, Canada",
+  "Master of Science in Ecology and Biodiversity", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
+  "Bachelor of Science (Honours) in Plant Sciences", "2017", "University of Pretoria", "Pretoria, South Africa",
+  "Bachelor of Science in Ecology", "2014-16", "University of Pretoria", "Pretoria, South Africa"
+) %>%
+  detailed_entries(with=Degree, when=Year, what=Institution, where=Where,
+                   .protect = FALSE)
+```
+
+# \faIcon{award} Funding and Awards
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE}
+
+tribble(
+  ~Institution, ~Award, ~Year,
+    'Awarded by: British Ecological Society',  "Robert May Prize", "2022",
+  'Awarded by: University of Pretoria',  "Qualified for the UP Postgraduate Masters Research Bursary", "2018",
+  'Awarded by: University of Pretoria',  "Awarded the 3rd year Undergraduate Mentorship Bursary", "2016",
+) %>%
+  detailed_entries(
+    what = Institution,
+    with = Award,
+    when = Year
+  )
+
+```
+
+\newpage
+# \faIcon{file-alt} Academic profile
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{../assets/proac.png}
+\end{figure}
+
+
+\vspace{\baselineskip}
+## **Publications**
+
+\textbf{\textsuperscript{*}} Indicates co-lead author
+
+```{r}
+vitae::bibliography_entries("../bib/journal.bib")
+```
+
+\vspace{\baselineskip}
+## **Preprints**
+
+```{r}
+bibliography_entries("../bib/preprint.bib")
+```
+
+<!--- 
+\newpage
+--->
+
+
+# \faIcon{users} Working Groups
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE}
+tribble(
+  ~ Project, ~Supervisor, ~Description,  ~ Year,
+  # Macro-Micro
+  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and \\textbf{T. Strydom}",NA, "2022",
+  # Macro-Micro
+  "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
+  # CAN metaweb
+  "Canadian metaweb construction working group","PIs: T. Poisot and L.J. Pollock",NA, "2021",
+  # Network pred synth
+  "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock",NA, "2020",
+  #PFTC5
+  "Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020") %>%
+  detailed_entries(with=Project, why=Description, when=Year, what = Supervisor,
+    .protect = FALSE)
+
+
+```
+
+<!--- 
+# \faIcon{chalkboard} Fellowships and Internships
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~Institution, ~Title, ~Year, ~Job,
+    
+  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021-23", NA,
+  # LIVING DATA
+  "Canadian Institute of Ecology and Evolution, Birds Canada", "Living Data Internship", "2022", "Data archiving for the Piping Plovers conservation pjoject",
+  'University of Bergen',  "UiB Internship", "2020", "Website development for the Plants Functional Courses website. This included content creation as well as some front end development",
+  'University of Pretoria',  "3rd year Undergraduate Mentorship Program", "2016", "Worked as an assistant within the M. Robertson lab. This included the sorting and identification of pitfall trap samples as well as extracting information from databases"
+) %>%
+  detailed_entries(
+    what = Institution,
+    with = Title,
+    when = Year,
+    why = Job,
+    .protect = FALSE
+  )
+
+```
+--->
+
+# \faIcon{chalkboard-teacher} Presentations
+
+\vspace{\baselineskip}
+
+## **Workshops and Organised Sessions**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~ Year, ~ Conference, ~ Who,
+  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","Francis Banville, Gabriel Dansereau, \\textbf{Tanya Strydom}",
+  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","Gracielle Higino, Mickey Boakye, Norma Forero, \\textbf{Tanya Strydom}"
+) %>%
+  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
+    .protect = FALSE)
+
+```
+
+\vspace{\baselineskip}
+\newpage
+## **Invited talks**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~ Year, ~ Conference, ~ Who,
+    "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "\\textbf{Tanya Strydom}",
+  "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "\\textbf{Tanya Strydom}",
+ "Taking FAIR and open science to the field: The evolution of the PFTC field course","Oct., 2020", "Living Norway Colloquium", "\\textbf{Tanya Strydom} alongside Aud H. Halbritter, 109 PFTC Participants",
+) %>%
+  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
+    .protect = FALSE)
+
+```
+\vspace{\baselineskip}
+## **Talks**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~ Year, ~ Conference, ~ Who,
+  "Exploring the complexity of ecological networks using SVD entropy", "Dec., 2020", "11th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Giulio V. Dalla Riva and Timothée Poisot",
+) %>%
+  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
+    .protect = FALSE)
+
+```
+
+\vspace{\baselineskip}
+## **Short Presentations and Posters**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~ Year, ~ Conference, ~ Who,
+  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  #QCBS POSTER
+  "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+) %>%
+  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
+    .protect = FALSE)
+
+```
+
+<!--- 
+# Teaching
+\vspace{\baselineskip}
+## **Workshops**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+tribble(
+  ~ Title, ~Points, ~ Year, ~ Conference, ~ Where,
+  "(un)Reproducibility Detox - Package and Dependency Management","Gracielle Higino, Andrew MacDonald, \\textbf{Tanya Strydom}", "Nov., 2021", "BIOS$^2$", "Virtual"
+) %>%
+  detailed_entries(with=Title, when=Year, what=Conference, where=Where, why=Points,
+    .protect = FALSE)
+
+```
+
+--->
+
+<!--- 
+\newpage
+--->
+
+# \faIcon{comments} Community Engagement
+\vspace{\baselineskip}
+## **Science Communication**
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+
+tribble(
+  ~Institution, ~Title, ~Year,
+  "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
+) %>%
+  detailed_entries(
+    what = Institution,
+    with = Title,
+    when = Year
+  )
+
+```
+\vspace{\baselineskip}
+## **Popular Articles**
+
+```{r}
+bibliography_entries("../bib/popular_articles.bib")
+```
+
+<!--chapter:end:CV.Rmd-->
