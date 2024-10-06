@@ -28,7 +28,7 @@ active_yrs <- current_yr - max_yr
 # the annual mean peer-reviewed publication citations 
 # over all academic years older than 1
 c_prp <- sum(subset(subset(df, Year < current_yr), Kind == "Peer-reviewed paper")[, "Current.number.of.citations"]) / active_yrs
-o_prp <- nrow(subset(df, Year < current_yr))
+o_prp <- nrow(subset(subset(df, Year < current_yr), Kind == "Peer-reviewed paper"))
 # total citations
 c_total <- sum(df$Current.number.of.citations)
 # citation first author
