@@ -1,10 +1,23 @@
 # libraries
 library(colorspace)
+library(extrafont)
 library(REdaS)
+library(sysfonts)
+library(showtext)
 library(tidyverse)
 
 # import dataset
 df <- read.csv("../ProAc/publications.csv")
+
+# import fonts
+font_add_google("Roboto",
+                "Roboto")
+font_paths()  
+font_files()
+font_families()
+trace(grDevices::png, exit = quote({
+  showtext::showtext_begin()
+}), print = FALSE)
 
 # year intervals/values
 current_yr <- as.numeric(format(Sys.Date(), "%Y"))
@@ -91,19 +104,20 @@ path_df <- tibble(place = 0:5,
                           metric == "Self-reliance" ~ group * 20,
                           metric == "Wider contribution" ~ group * 5,
                           metric == "Openness" ~ group * 20))
-
-ggplot(arc_df) +
+plot <-
+  ggplot(arc_df) +
   geom_polygon(data = path_df,
                aes(x = x, y = y, group = group),
                fill = NA,
                colour = "#4B2473",
                linewidth = 1) +
   geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
-               linewidth = 6, colour = "#E1EF77") +
+               linewidth = 5, colour = "#E1EF77") +
   geom_text(data = path_df,
             aes(x = x, y = y, label = text),
             colour = "#4B2473",
-             size = 3) +
+            size = 3,
+            family = "Roboto") +
   geom_polygon(aes(x = x,
                    y = y),
                fill = '#F263A6',
@@ -117,28 +131,32 @@ ggplot(arc_df) +
                 label = score),
             size = 5,
             fontface = "bold",
-            colour = "#4B2473") +
+            colour = "#4B2473",
+            family = "Roboto") +
   geom_text(aes(x = xtext,
                 y = ytext,
                 label = metric,
                 hjust = hjust),
             size = 8,
             fontface = "bold",
-            colour = "#04ADBF") +
+            colour = "#04ADBF",
+            family = "Roboto") +
   geom_text(aes(x = xtext,
                 y = ynudge,
                 label = text,
                 hjust = hjust),
             size = 4,
             vjust = "outward",
-            colour = "#4B2473") +
+            colour = "#4B2473",
+            family = "Roboto") +
   coord_cartesian(xlim = c(-200, 200),
                   ylim = c(-120, 120)) +
   labs(caption = "Source: Multi-metric academic profiling with ProAc (1.0.0): https://doi.org/10.5281/zenodo.4899015") +
   theme_void() +
-  theme(plot.caption = element_text(size = 11, face = "italic"))
+  theme(plot.caption = element_text(size = 11, face = "italic", family = "Roboto"))
 
 ggsave("../assets/proac.png",
+       plot,
        width = 4000,
        height = 2250,
        units = "px")
