@@ -12,6 +12,8 @@ df <- read.csv("../ProAc/publications.csv")
 # import fonts
 font_add_google("Roboto",
                 "Roboto")
+font_add_google("Source Sans 3",
+                "sourcesans")
 font_paths()  
 font_files()
 font_families()
@@ -145,15 +147,15 @@ plot <-
                 y = ynudge,
                 label = text,
                 hjust = hjust),
-            size = 2,
+            size = 2.25,
             vjust = "outward",
             colour = "#4B2473",
-            family = "Roboto") +
+            family = "sourcesans") +
   coord_cartesian(xlim = c(-200, 200),
                   ylim = c(-120, 120)) +
   labs(caption = "Source: Multi-metric academic profiling with ProAc (1.0.0): https://doi.org/10.5281/zenodo.4899015") +
   theme_void() +
-  theme(plot.caption = element_text(size = 6, face = "italic", family = "Roboto"))
+  theme(plot.caption = element_text(size = 6, face = "italic", family = "sourcesans"))
 
 showtext::showtext_auto()
 showtext::showtext_opts(dpi = 600)
