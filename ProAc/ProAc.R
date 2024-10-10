@@ -116,7 +116,7 @@ plot <-
   geom_text(data = path_df,
             aes(x = x, y = y, label = text),
             colour = "#4B2473",
-            size = 3,
+            size = 1.5,
             family = "Roboto") +
   geom_polygon(aes(x = x,
                    y = y),
@@ -129,7 +129,7 @@ plot <-
              colour = '#F263A6') +
   geom_text(aes(x = x, y = y,
                 label = score),
-            size = 5,
+            size = 2.5,
             fontface = "bold",
             colour = "#4B2473",
             family = "Roboto") +
@@ -137,7 +137,7 @@ plot <-
                 y = ytext,
                 label = metric,
                 hjust = hjust),
-            size = 8,
+            size = 5,
             fontface = "bold",
             colour = "#04ADBF",
             family = "Roboto") +
@@ -145,7 +145,7 @@ plot <-
                 y = ynudge,
                 label = text,
                 hjust = hjust),
-            size = 4,
+            size = 2,
             vjust = "outward",
             colour = "#4B2473",
             family = "Roboto") +
@@ -153,8 +153,10 @@ plot <-
                   ylim = c(-120, 120)) +
   labs(caption = "Source: Multi-metric academic profiling with ProAc (1.0.0): https://doi.org/10.5281/zenodo.4899015") +
   theme_void() +
-  theme(plot.caption = element_text(size = 11, face = "italic", family = "Roboto"))
+  theme(plot.caption = element_text(size = 6, face = "italic", family = "Roboto"))
 
+showtext::showtext_auto()
+showtext::showtext_opts(dpi = 600)
 ggsave("../assets/proac.png",
        plot,
        width = 4000,
