@@ -3,8 +3,7 @@
 graphics: yes
 name: Tanya
 surname: Strydom
-#headcolor: 414141
-#qualifications: "BSc. (Hons), MSc."
+#qualifications: "PhD."
 position: "Postdoctoral Researcher"
 pronouns: "she/they"
 address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
