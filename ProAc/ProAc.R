@@ -2,12 +2,16 @@
 library(colorspace)
 library(extrafont)
 library(REdaS)
-library(sysfonts)
+library(scholar)
 library(showtext)
+library(sysfonts)
 library(tidyverse)
 
 # import dataset
-df <- read.csv("../ProAc/publications.csv")
+df <- read.csv("../ProAc/publications.csv") %>% 
+  left_join(.,
+            get_publications('ZmKF0sEAAAAJ') %>% 
+              select(cites, pubid))
 
 # import fonts
 font_add_google("Roboto",
@@ -29,22 +33,22 @@ active_yrs <- current_yr - max_yr
 # get interim metric/terms (notation ~ used in manuscript)
 # the annual mean peer-reviewed publication citations 
 # over all academic years older than 1
-c_prp <- sum(subset(subset(df, Year < current_yr), Kind == "Peer-reviewed paper")[, "Current.number.of.citations"]) / active_yrs
+c_prp <- sum(subset(subset(df, Year < current_yr), Kind == "Peer-reviewed paper")[, "cites"]) / active_yrs
 o_prp <- nrow(subset(subset(df, Year < current_yr), Kind == "Peer-reviewed paper"))
 # total citations
-c_total <- sum(df$Current.number.of.citations)
+c_total <- sum(df$cites)
 # citation first author
-c_fa <- sum(subset(df, First.authored == 1)[, "Current.number.of.citations"])
+c_fa <- sum(subset(df, First.authored == 1)[, "cites"])
 # citations exclude PhD supervisor
-c_aut <- sum(subset(df, Including.PhD.supervisor == 0)[, "Current.number.of.citations"])
+c_aut <- sum(subset(df, Including.PhD.supervisor == 0)[, "cites"])
 # non-peer-reviewed citations
-c_nprp <- sum(subset(df, Kind != "Peer-reviewed paper")[, "Current.number.of.citations"])
+c_nprp <- sum(subset(df, Kind != "Peer-reviewed paper")[, "cites"])
 # OA publications (last 5 years)
 o_oa <- nrow(subset(subset(df, Open.access == 1), Year > current_yr - 5))
 # total publications (last 5 years)
 o_t5 <- nrow(subset(df, Year > current_yr - 5))
 # h index
-a <- sort(df$Current.number.of.citations, decreasing = TRUE)
+a <- sort(df$cites, decreasing = TRUE)
 h <- tail(which(a >= seq_along(a)), 1)
 
 # get metrics
@@ -114,11 +118,11 @@ plot <-
                colour = "#4B2473",
                linewidth = 1) +
   geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
-               linewidth = 5, colour = "#E1EF77") +
+               linewidth = 6, colour = "#E1EF77") +
   geom_text(data = path_df,
             aes(x = x, y = y, label = text),
             colour = "#4B2473",
-            size = 1.5,
+            size = 1.4,
             family = "Roboto") +
   geom_polygon(aes(x = x,
                    y = y),
