@@ -118,11 +118,11 @@ plot <-
                colour = "#4B2473",
                linewidth = 1) +
   geom_segment(aes(x = 0, xend = xsegment, y = 0, yend = ysegment),
-               linewidth = 5, colour = "#E1EF77") +
+               linewidth = 6, colour = "#E1EF77") +
   geom_text(data = path_df,
             aes(x = x, y = y, label = text),
             colour = "#4B2473",
-            size = 1.5,
+            size = 1.4,
             family = "Roboto") +
   geom_polygon(aes(x = x,
                    y = y),
