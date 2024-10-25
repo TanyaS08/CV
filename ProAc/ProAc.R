@@ -11,7 +11,8 @@ library(tidyverse)
 df <- read.csv("../ProAc/publications.csv") %>% 
   left_join(.,
             get_publications('ZmKF0sEAAAAJ') %>% 
-              select(cites, pubid))
+              select(cites, pubid)) %>%
+  select(-Current.number.of.citations)
 
 # import fonts
 font_add_google("Roboto",
@@ -168,3 +169,7 @@ ggsave("../assets/proac.png",
        width = 4000,
        height = 2250,
        units = "px")
+
+write.csv(df, 
+          "../ProAc/publications.csv")
+
