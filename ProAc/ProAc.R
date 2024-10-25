@@ -11,8 +11,7 @@ library(tidyverse)
 df <- read.csv("../ProAc/publications.csv") %>% 
   left_join(.,
             get_publications('ZmKF0sEAAAAJ') %>% 
-              select(cites, pubid)) %>%
-  select(-Current.number.of.citations)
+              select(cites, pubid))
 
 # import fonts
 font_add_google("Roboto",
@@ -55,9 +54,9 @@ h <- tail(which(a >= seq_along(a)), 1)
 # get metrics
 impact <- c_prp / o_prp
 achievement <- h
-autonomy <- c_aut / c_total
+autonomy <- c_aut / c_total * 100
 self <- c_fa / c_total * 100
-wider <- c_nprp / c_total
+wider <- c_nprp / c_total * 100
 openness <- o_oa / o_t5  * 100
 
 # collate all metrics and apply rotation function
@@ -65,9 +64,9 @@ arc_df <- tribble(
   ~metric, ~score, ~value, ~place, ~text,
   "Impact", impact, ifelse(impact > 20, 100, (impact / 20) * 100), 0, "Annual citations per peer-reiewed publication",
   "Achievements", h, ifelse(h >= 30, 100, (h / 30) * 100), 5, "Publication output and impact",
-  "Autonomy", autonomy, ifelse(autonomy >= 0.50, 100, autonomy * 100), 4, "% of publications exluding PhD supervisor",
+  "Autonomy", autonomy, ifelse(autonomy >= 50, 100, autonomy * 2), 4, "% of publications exluding PhD supervisor",
   "Self-reliance", self, self, 3, "% of first-authored citations",
-  "Wider contribution", wider, ifelse(wider >= 0.25, 100, (wider) * 100), 2, "% on non-peer-reviewed publication citations",
+  "Wider contribution", wider, ifelse(wider >= 25, 100, wider), 2, "% on non-peer-reviewed publication citations",
   "Openness", openness, openness, 1, "% of open-access output during past 5 years") %>%
   mutate(angle = deg2rad(60 * place)) %>%
   mutate(x = (value * sin(angle)),
@@ -171,5 +170,6 @@ ggsave("../assets/proac.png",
        units = "px")
 
 write.csv(df, 
-          "../ProAc/publications.csv")
+          "../ProAc/publications.csv", 
+          row.names = FALSE)
 
