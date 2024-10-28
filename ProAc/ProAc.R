@@ -9,6 +9,7 @@ library(tidyverse)
 
 # import dataset
 df <- read.csv("../ProAc/publications.csv") %>% 
+  select(-cites) %>%
   left_join(.,
             get_publications('ZmKF0sEAAAAJ') %>% 
               select(cites, pubid))
