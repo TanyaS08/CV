@@ -553,7 +553,7 @@
           {}%
           {%
             \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-            \href{https://ecoevo.social/@\@twitter}{\faMastodon\acvHeaderIconSep\@twitter}%
+            \href{https://ecoevo.social/@\@twitter}{\acvHeaderIconSep\@twitter}%
           }%
         \ifthenelse{\isundefined{\@xing}}%
         {}%
