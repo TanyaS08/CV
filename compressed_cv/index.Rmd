@@ -270,13 +270,14 @@ tribble(
 
 # \faIcon{comments} Community Engagement
 \vspace{\baselineskip}
-## **Science Communication**
+## **Scientific outreach**
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
 
 tribble(
   ~Institution, ~Title, ~Year,
   "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
+  "Q&A sessions with school groups",  "Skype a Scientist", "",
 ) %>%
   detailed_entries(
     what = Institution,
