@@ -22,9 +22,11 @@ date: "`r format(Sys.time(), '%B %Y')`"
 csl: "../csl/apa.csl"
 nocite: "@*"
 headcolor: 04ADBF
-output: 
-  pdf_document: 
-    keep_tex: true
+knit: (function(inputFile, encoding) {
+     rmarkdown::render(inputFile,
+    output_file = "cv",
+     encoding = encoding)
+     })
 header-includes:
   - \usepackage{fontawesome5}
   - \usepackage{graphicx}
