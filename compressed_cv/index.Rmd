@@ -114,7 +114,6 @@ tribble(
   \includegraphics[width=\linewidth]{../assets/proac.png}
 \end{figure}
 
-
 \vspace{\baselineskip}
 ## **Publications**
 
@@ -237,9 +236,11 @@ tribble(
 
 tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
-  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  # BES poster
+  "The Nuances of Food Webs: An Overview of Definitions, Scales, and Mechanisms", "Dec., 2024", "BES Annual Meeting", "\\textbf{Tanya Strydom}, Jennifer Dunne, Timothée Poisot and Andrew P. Beckerman",
   #QCBS POSTER
   "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
 ) %>%
   detailed_entries(with=Title, when=Year, what=Who, where=Conference,
     .protect = FALSE)
@@ -277,7 +278,8 @@ tribble(
 tribble(
   ~Institution, ~Title, ~Year,
   "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
-  "Q&A sessions with school groups",  "Skype a Scientist", "",
+  "Q&A sessions with school groups",  "Skype a Scientist", "2024 - Present",
+  "Pen pal programme with high school students",  "Letters to a PreScientist", "2025",
 ) %>%
   detailed_entries(
     what = Institution,
