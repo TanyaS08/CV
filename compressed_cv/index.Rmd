@@ -247,22 +247,38 @@ tribble(
 
 ```
 
-<!--- 
-# Teaching
+
+# \faIcon{chalkboard} Teaching
 \vspace{\baselineskip}
-## **Workshops**
+## **Invited Lectures**
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 
 tribble(
-  ~ Title, ~Points, ~ Year, ~ Conference, ~ Where,
-  "(un)Reproducibility Detox - Package and Dependency Management","Gracielle Higino, Andrew MacDonald, \\textbf{Tanya Strydom}", "Nov., 2021", "BIOS$^2$", "Virtual"
+  ~ Title, ~Class, ~ Year, ~ Where,
+  "Species Interaction Networks: A Macro-level Overview","Community Ecology", "Mar., 2025", "Univerity of South Florida"
 ) %>%
-  detailed_entries(with=Title, when=Year, what=Conference, where=Where, why=Points,
+  detailed_entries(with=Title, when=Year, what=Class, where=Where,
     .protect = FALSE)
 
 ```
 
+<!--- 
+\vspace{\baselineskip}
+## **Teaching Materials**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+# link: https://reprodetox.netlify.app
+
+tribble(
+  ~ Title, ~Content, ~ Year, ~ Where,
+  "(un)Reproducibility Detox - Package and Dependency Management","Gracielle Higino,\\textbf{Tanya Strydom}", "Nov., 2021", "BIOS$^2$"
+) %>%
+  detailed_entries(with=Title, when=Year, what=Content, where=Where,
+    .protect = FALSE)
+
+```
 --->
 
 <!--- 
