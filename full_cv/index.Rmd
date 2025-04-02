@@ -4,7 +4,7 @@ graphics: yes
 name: Tanya
 surname: Strydom
 #headcolor: 414141
-#qualifications: "BSc. (Hons), MSc."
+#qualifications: "PhD"
 position: "Postdoctoral Researcher"
 pronouns: "she/they"
 address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
@@ -150,7 +150,7 @@ tribble(
 
 ```
 
-<!--- 
+
 # \faIcon{chalkboard} Fellowships and Internships
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
@@ -173,7 +173,7 @@ tribble(
   )
 
 ```
---->
+
 
 # \faIcon{chalkboard-teacher} Presentations
 
@@ -229,35 +229,37 @@ tribble(
 
 tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
-  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  # BES poster
+  "The Nuances of Food Webs: An Overview of Definitions, Scales, and Mechanisms", "Dec., 2024", "BES Annual Meeting", "\\textbf{Tanya Strydom}, Jennifer Dunne, Timothée Poisot and Andrew P. Beckerman",
   #QCBS POSTER
   "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
 ) %>%
   detailed_entries(with=Title, when=Year, what=Who, where=Conference,
     .protect = FALSE)
 
 ```
 
-<!--- 
-# Teaching
+# \faIcon{chalkboard} Teaching
 \vspace{\baselineskip}
-## **Workshops**
+## **Invited Lectures**
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 
 tribble(
-  ~ Title, ~Points, ~ Year, ~ Conference, ~ Where,
-  "(un)Reproducibility Detox - Package and Dependency Management","Gracielle Higino, Andrew MacDonald, \\textbf{Tanya Strydom}", "Nov., 2021", "BIOS$^2$", "Virtual"
+  ~ Title, ~Class, ~ Year, ~ Where,
+  "Species Interaction Networks: A Macro-level Overview","Community Ecology", "Mar., 2025", "Univerity of South Florida"
 ) %>%
-  detailed_entries(with=Title, when=Year, what=Conference, where=Where, why=Points,
+  detailed_entries(with=Title, when=Year, what=Class, where=Where,
     .protect = FALSE)
 
 ```
 
---->
-
-\newpage
 # \faIcon{comments} Community Engagement
+\vspace{\baselineskip}
+## **Referee Duties**
+Nature Reviews Biodiversity (1); Methods in Ecology and Evolution (1); Ecology Letters (2); Functional Ecology (1); Diversity and Distributions (2); Journal of Animal Ecology (1); PLOS Computational Biology (1); Global Change Biology (1); PLOS One (1); Plant Ecology (2); Ecology (1); Ecology and Evolution (1)
+
 \vspace{\baselineskip}
 ## **Science Communication**
 
@@ -266,6 +268,8 @@ tribble(
 tribble(
   ~Institution, ~Title, ~Year,
   "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
+  "Q&A sessions with school groups",  "Skype a Scientist", "2024 - Present",
+  "Pen pal programme with high school students",  "Letters to a PreScientist", "2025",
 ) %>%
   detailed_entries(
     what = Institution,
