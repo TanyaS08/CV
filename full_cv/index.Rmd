@@ -258,7 +258,7 @@ tribble(
 # \faIcon{comments} Community Engagement
 \vspace{\baselineskip}
 ## **Referee Duties**
-Nature Reviews Biodiversity (1); Methods in Ecology and Evolution (1); Ecology Letters (2); Functional Ecology (1); Diversity and Distributions (2); Journal of Animal Ecology (1); PLoS Computational Biology (1); Global Change Biology (1); PLoS One (1); Plant Ecology (2); Ecology (1); Ecology and Evolution (1)
+Nature Reviews Biodiversity (1); Methods in Ecology and Evolution (1); Ecology Letters (2); Functional Ecology (1); Diversity and Distributions (2); Journal of Animal Ecology (1); PLoS Computational Biology (1); Global Change Biology (1); PLoS One (1); Plant Ecology (2); Ecology (1); Ecology and Evolution (1); Journal of Open Source Software (1)
 
 \vspace{\baselineskip}
 ## **Science Communication**
