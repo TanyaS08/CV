@@ -67,7 +67,7 @@ arc_df <- tribble(
   "Achievements", h, ifelse(h >= 30, 100, (h / 30) * 100), 5, "Publication output and impact",
   "Autonomy", autonomy, ifelse(autonomy >= 50, 100, autonomy * 2), 4, "% of publications exluding PhD supervisor",
   "Self-reliance", self, self, 3, "% of first-authored citations",
-  "Wider contribution", wider, ifelse(wider >= 25, 100, wider), 2, "% on non-peer-reviewed publication citations",
+  "Wider contribution", wider, ifelse(wider >= 25, 100, wider), 2, "% of non-peer-reviewed publication citations",
   "Openness", openness, openness, 1, "% of open-access output during past 5 years") %>%
   mutate(angle = deg2rad(60 * place)) %>%
   mutate(x = (value * sin(angle)),
