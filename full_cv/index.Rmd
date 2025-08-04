@@ -215,6 +215,7 @@ tribble(
 
 tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
+  "It's okay to be different: Understanding how and why network construction matters", "July, 2025", "4th CPEG Symposium", "\\textbf{Tanya Strydom}",
   "Exploring the complexity of ecological networks using SVD entropy", "Dec., 2020", "11th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Giulio V. Dalla Riva and Timothée Poisot",
 ) %>%
   detailed_entries(with=Title, when=Year, what=Who, where=Conference,
