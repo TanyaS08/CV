@@ -123,6 +123,7 @@ tribble(
 vitae::bibliography_entries("../bib/journal.bib")
 ```
 
+<!--- 
 \vspace{\baselineskip}
 ## **Preprints**
 
@@ -130,7 +131,7 @@ vitae::bibliography_entries("../bib/journal.bib")
 bibliography_entries("../bib/preprint.bib")
 ```
 
-<!--- 
+
 \newpage
 --->
 
