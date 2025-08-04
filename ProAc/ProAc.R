@@ -12,7 +12,8 @@ df <- read.csv("../ProAc/publications.csv") %>%
   select(-cites) %>%
   left_join(.,
             get_publications('ZmKF0sEAAAAJ') %>% 
-              select(cites, pubid))
+              select(cites, pubid)) %>%
+  na.omit()
 
 # import fonts
 font_add_google("Roboto",
