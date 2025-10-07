@@ -52,6 +52,10 @@ library(tidyverse)
 library(fontawesome)
 ```
 
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{../assets/interests.png}
+\end{figure}
+
 # \faIcon{lightbulb} Research Profile
 
 Food Webs; Method Development, Trait Ecology, Open and FAIR Science
@@ -107,7 +111,7 @@ tribble(
 ```
 
 \newpage
-# \faIcon{file-alt} Publications
+# \faIcon{file-alt} Academic profile
 
 \textbf{\textsuperscript{*}} Indicates co-lead author
 
@@ -129,6 +133,17 @@ bibliography_entries("../bib/preprint.bib")
 \newpage
 --->
 
+## **In Prep**
+
+```{r}
+vitae::bibliography_entries("../bib/in_prep.bib")
+```
+
+## **Archived datasets**
+
+```{r}
+vitae::bibliography_entries("../bib/archived_data.bib")
+```
 
 # \faIcon{users} Working Groups
 

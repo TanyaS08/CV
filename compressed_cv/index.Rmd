@@ -108,7 +108,7 @@ tribble(
 ```
 
 \newpage
-# \faIcon{file-alt} Academic profile
+# \faIcon{file-alt} Research Outputs
 
 <!--- 
 \begin{figure}[H]
@@ -138,6 +138,18 @@ bibliography_entries("../bib/preprint.bib")
 
 \newpage
 --->
+
+## **In Prep**
+
+```{r}
+vitae::bibliography_entries("../bib/in_prep.bib")
+```
+
+## **Archived datasets**
+
+```{r}
+vitae::bibliography_entries("../bib/archived_data.bib")
+```
 
 
 # \faIcon{users} Working Groups
