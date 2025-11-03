@@ -215,6 +215,7 @@ tribble(
 
 tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
+    "The Risks and Rewards of Large Language Models in (Open) Scientific Research","Oct., 2025", "SORTEE", "\\textbf{Tanya Strydom}",
     "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "\\textbf{Tanya Strydom}",
   "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "\\textbf{Tanya Strydom}",
  "Taking FAIR and open science to the field: The evolution of the PFTC field course","Oct., 2020", "Living Norway Colloquium", "\\textbf{Tanya Strydom} alongside Aud H. Halbritter, 109 PFTC Participants",
