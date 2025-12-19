@@ -85,7 +85,7 @@ tribble(
   "Bachelor of Science (Honours) in Plant Sciences", "2017", "University of Pretoria", "Pretoria, South Africa",
   "Bachelor of Science in Ecology", "2014-16", "University of Pretoria", "Pretoria, South Africa"
 ) %>%
-  detailed_entries(with=Degree, when=Year, what=Institution, where=Where,
+  detailed_entries(with = Degree, when = Year, what = Institution, where = Where,
                    .protect = FALSE)
 ```
 
