@@ -127,7 +127,7 @@ tribble(
 vitae::bibliography_entries("../bib/journal.bib")
 ```
 
-<!--- 
+
 \vspace{\baselineskip}
 ## **Preprints**
 
@@ -135,7 +135,7 @@ vitae::bibliography_entries("../bib/journal.bib")
 bibliography_entries("../bib/preprint.bib")
 ```
 
-
+<!--- 
 \newpage
 --->
 
@@ -235,7 +235,10 @@ tribble(
 ```
 \vspace{\baselineskip}
 
+<!--- 
 \newpage
+--->
+
 ## **Talks**
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
@@ -277,7 +280,7 @@ tribble(
 
 tribble(
   ~ Title, ~Class, ~ Year, ~ Where,
-  "Species Interaction Networks: A Macro-level Overview","Community Ecology", "Mar., 2025", "Univerity of South Florida"
+  "Species Interaction Networks: A Macro-level Overview","Community Ecology", "2025 - Present", "Univerity of South Florida"
 ) %>%
   detailed_entries(with=Title, when=Year, what=Class, where=Where,
     .protect = FALSE)
