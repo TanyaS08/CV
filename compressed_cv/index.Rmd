@@ -56,11 +56,13 @@ library(fontawesome)
 #source("../ProAc/ProAc.R")
 ```
 
-# \faIcon{lightbulb} Research Profile
-
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{../assets/interests.png}
 \end{figure}
+
+# \faIcon{lightbulb} Research Profile
+
+My research asks when ecological networks are meaningful representations of ecological systems, and when they are not. I develop computational and theoretical frameworks that treat networks as scale-dependent, constraint-driven, and inherently uncertain, linking interaction assembly, system embedding, and ecological inference. This work aims to define the limits of predictability in ecology and to build principled, open tools for inference under those constraints.
 
 # \faIcon{briefcase} Professional Experience
 
@@ -89,6 +91,8 @@ tribble(
                    .protect = FALSE)
 ```
 
+\newpage
+
 # \faIcon{award} Funding and Awards
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
@@ -107,7 +111,6 @@ tribble(
 
 ```
 
-\newpage
 # \faIcon{file-alt} Research Outputs
 
 <!--- 
@@ -137,14 +140,15 @@ bibliography_entries("../bib/preprint.bib")
 
 <!--- 
 \newpage
---->
-
+\vspace{\baselineskip}
 ## **In Prep**
 
 ```{r}
 vitae::bibliography_entries("../bib/in_prep.bib")
 ```
 
+--->
+\vspace{\baselineskip}
 ## **Archived datasets**
 
 ```{r}
@@ -152,7 +156,7 @@ vitae::bibliography_entries("../bib/archived_data.bib")
 ```
 
 
-# \faIcon{users} Working Groups
+# \faIcon{users} Collaborative Projects
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 tribble(
@@ -197,6 +201,8 @@ tribble(
 
 ```
 --->
+
+\newpage
 
 # \faIcon{chalkboard-teacher} Presentations
 
@@ -309,7 +315,7 @@ tribble(
 \newpage
 --->
 
-# \faIcon{comments} Community Engagement
+# \faIcon{comments} Science Communication & Outreach
 \vspace{\baselineskip}
 ## **Scientific outreach**
 
