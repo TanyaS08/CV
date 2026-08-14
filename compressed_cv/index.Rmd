@@ -62,7 +62,7 @@ library(fontawesome)
 
 # \faIcon{lightbulb} Research Profile
 
-My research asks when ecological networks are meaningful representations of ecological systems, and when they are not. I develop computational and theoretical frameworks that treat networks as scale-dependent, constraint-driven, and inherently uncertain, linking interaction assembly, system embedding, and ecological inference. This work aims to define the limits of predictability in ecology and to build principled, open tools for inference under those constraints.
+My research develops a theory of ecological inference for complex systems. I investigate how ecological representations capture, distort, and constrain our understanding of biodiversity. By combining ecological theory, network science, machine learning, and complexity science, I study how interactions emerge across scales, the propagation of uncertainty through ecological analyses, and what can ultimately be inferred and predicted about ecological systems from incomplete observations. My work aims to transform ecological networks from descriptive summaries into rigorous, predictive tools for biodiversity science and decision-making.
 
 # \faIcon{briefcase} Professional Experience
 
