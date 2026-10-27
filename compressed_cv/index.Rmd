@@ -161,6 +161,8 @@ vitae::bibliography_entries("../bib/archived_data.bib")
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
 tribble(
   ~ Project, ~Supervisor, ~Description,  ~ Year,
+  # Metaweb2
+  "Metaweb2","PIs: Merin Reji Chacko", NA, "2026",
   # Macro-Micro
   "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and \\textbf{T. Strydom}",NA, "2022",
   # Macro-Micro
@@ -230,6 +232,8 @@ tribble(
 
 tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
+    "Take a Byte: How the (En)Codification of Food Webs Impacts Inference","Oct., 2026", "Theoretical Ecology Seminar Series", "\\textbf{Tanya Strydom}",
+    "How do you Reconstruct a Food Web that Died 200 million Years Ago?","Oct., 2026", "Yorkshire Geological Society", "\\textbf{Tanya Strydom}",
     "The Risks and Rewards of Large Language Models in (Open) Scientific Research","Oct., 2025", "SORTEE", "\\textbf{Tanya Strydom}",
     "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "\\textbf{Tanya Strydom}",
   "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "\\textbf{Tanya Strydom}",
