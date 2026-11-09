@@ -21,7 +21,7 @@ orcid: 0000-0001-6067-1349
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: "../csl/apa.csl"
 nocite: "@*"
-headcolor: 04ADBF
+headcolor: 5E53A6
 knit: (function(inputFile, encoding) {
      rmarkdown::render(inputFile,
     output_file = "cv",
@@ -155,6 +155,26 @@ vitae::bibliography_entries("../bib/in_prep.bib")
 vitae::bibliography_entries("../bib/archived_data.bib")
 ```
 
+# \faIcon{code} Research Software
+
+```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+library(tibble)
+tribble(
+  ~ Name, ~ Language, ~ Description, ~ DOI,
+  "pfwim.R", "CRAN v1.0.2", "Paleo food web inference model", "R",
+  "SpatialBoundaries.jl", "v0.2.0", "Edge detection using spatial wombling", "Julia",
+  "FoodWebTools.jl", "v0.1beta", "Tools for building and measuring networks", "Julia",
+  "Extinctions.jl", "v0.1beta", "Extinction simulations of food webs", "Julia",
+  "pfim.jl", "v0.0.2", "Paleo food web inference model", "Julia",
+) %>%
+  detailed_entries(with = Name, 
+                   when = Language, 
+                   what = Description, 
+                   where = DOI,
+                   .protect = FALSE)
+```
+
+\newpage
 
 # \faIcon{users} Collaborative Projects
 
@@ -203,8 +223,6 @@ tribble(
 
 ```
 --->
-
-\newpage
 
 # \faIcon{chalkboard-teacher} Presentations
 
@@ -264,6 +282,9 @@ tribble(
 ```
 
 \vspace{\baselineskip}
+
+\newpage
+
 ## **Short Presentations and Posters**
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
