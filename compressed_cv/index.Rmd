@@ -70,7 +70,7 @@ My research develops a theory of ecological inference for complex systems. I inv
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Postdoctoral Researcher", "2024 - Present", "University of Sheffield", "Sheffield, UK"
+  "Postdoctoral Research Associate", "2024 - Present", "University of Sheffield", "Sheffield, UK"
 ) %>%
   detailed_entries(with=Degree, when=Year, what=Institution, where=Where,
                    .protect = FALSE)
@@ -165,7 +165,7 @@ tribble(
   "SpatialBoundaries.jl", "v0.2.0", "Edge detection using spatial wombling", "Julia",
   "FoodWebTools.jl", "v0.1beta", "Tools for building and measuring networks", "Julia",
   "Extinctions.jl", "v0.1beta", "Extinction simulations of food webs", "Julia",
-  "pfim.jl", "v0.0.2", "Paleo food web inference model", "Julia",
+  #"pfim.jl", "v0.0.2", "Paleo food web inference model", "Julia",
 ) %>%
   detailed_entries(with = Name, 
                    when = Language, 
@@ -192,7 +192,8 @@ tribble(
   # Network pred synth
   "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock",NA, "2020",
   #PFTC5
-  "Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020") %>%
+  #"Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020"
+  ) %>%
   detailed_entries(with=Project, why=Description, when=Year, what = Supervisor,
     .protect = FALSE)
 
@@ -350,7 +351,7 @@ tribble(
   ~Institution, ~Title, ~Year,
   "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
   "Q&A sessions with school groups",  "Skype a Scientist", "2024 - Present",
-  "Pen pal programme with high school students",  "Letters to a PreScientist", "2025",
+  "Pen pal programme with school students",  "Letters to a PreScientist", "2025 - Present",
 ) %>%
   detailed_entries(
     what = Institution,
