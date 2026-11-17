@@ -1,0 +1,16 @@
+# `r cv_section_icon("award")` Funding and Awards
+
+```{r funding}
+#| echo: false
+#| results: asis
+
+funding <- tribble(
+  ~Institution, ~Award, ~Year,
+    "Awarded by: British Ecological Society",  "Robert May Prize", "2022",
+  "Awarded by: University of Pretoria",  "Qualified for the UP Postgraduate Masters Research Bursary", "2018",
+  "Awarded by: University of Pretoria",  "Awarded the 3rd year Undergraduate Mentorship Bursary", "2016",
+) 
+
+cv_entries(funding, with = "Award", when = "Year",
+           what = "Institution")
+```

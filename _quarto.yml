@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: Rscript R/render-cv-header.R
+  resources:
+    - assets/logo.png
+  render:
+    - index.qmd
+
+website:
+  title: "Tanya Strydom"
+  navbar:
+    title: "Tanya Strydom"
+    left:
+      - href: index.qmd
+        text: CV
+
+format:
+  html:
+    css: styles.css
+    toc: false

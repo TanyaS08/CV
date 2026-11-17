@@ -1,0 +1,22 @@
+# `r cv_section_icon("code")` Research Software
+
+```{r}
+#| echo: false
+#| results: asis
+
+software <- data.frame(
+  Name = c("pfwim.R", "SpatialBoundaries.jl", "FoodWebTools.jl", "Extinctions.jl"),
+  Language = c("CRAN v1.0.2", "v0.2.0", "v0.1beta", "v0.1beta"),
+  Description = c(
+    "Paleo food web inference model",
+    "Edge detection using spatial wombling",
+    "Tools for building and measuring networks",
+    "Extinction simulations of food webs"
+  ),
+  DOI = c("R", "Julia", "Julia", "Julia"),
+  stringsAsFactors = FALSE
+)
+
+cv_entries(software, with = "Name", when = "Language",
+           what = "Description", where = "DOI")
+```

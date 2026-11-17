@@ -1,0 +1,25 @@
+# `r cv_section_icon("users")` Collaborative Projects
+
+```{r projects}
+#| echo: false
+#| results: asis
+
+projects <- tribble(
+  ~ Project, ~Supervisor, ~Description,  ~ Year,
+  # Metaweb2
+  "Metaweb2","PIs: Merin Reji Chacko", NA, "2026",
+  # Macro-Micro
+  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and **T. Strydom**",NA, "2022",
+  # Macro-Micro
+  "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
+  # CAN metaweb
+  "Canadian metaweb construction working group","PIs: T. Poisot and L.J. Pollock", NA, "2021",
+  # Network pred synth
+  "Network prediction synthesis working group","PIs: T. Poisot and L.J. Pollock", NA, "2020",
+  #PFTC5
+  #"Plant Functional Trait Course 5 in Peru","PIs: V. Vandvik and B.J. Enquist",NA, "2020"
+  )
+
+cv_entries(projects, with = "Project", when = "Year",
+           what = "Supervisor", where = "Description")
+```
