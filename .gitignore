@@ -6,3 +6,11 @@
 .DS_Store
 full_cv/cv 2.aux
 .positai
+_site/
+.quarto/
+/includes/generated-cv-header.tex
+/includes/generated-cv-theme.css
+/includes/generated-bluesky.pdf
+
+/.quarto/
+**/*.quarto_ipynb
