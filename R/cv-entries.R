@@ -2,6 +2,24 @@
 library(tibble)
 
 escape_tex <- function(value) {
+  value <- gsub("\\*\\*([^*]+)\\*\\*", "\\\\textbf{\\1}", value,
+                perl = TRUE)
+  value <- gsub("\\*([^*]+)\\*", "\\\\textit{\\1}", value,
+                perl = TRUE)
+
+  tokens <- character()
+  pattern <- "\\\\(?:textbf|textit|emph|textsuperscript|textsubscript)\\{[^{}]*\\}|\\$\\^[^$]*\\$"
+  matches <- gregexpr(pattern, value, perl = TRUE)
+  found <- regmatches(value, matches)[[1]]
+  if (length(found) > 0L && !identical(found, character(0))) {
+    replaced <- vapply(found, function(match) {
+      token <- sprintf("CVTEX%04dTOKEN", length(tokens) + 1L)
+      tokens[token] <<- match
+      token
+    }, character(1))
+    regmatches(value, matches) <- list(replaced)
+  }
+
   replacements <- c(
     "\\" = "\\textbackslash{}",
     "&" = "\\&",
@@ -16,9 +34,13 @@ escape_tex <- function(value) {
   )
 
   chars <- strsplit(value, "", fixed = TRUE)[[1]]
-  paste0(vapply(chars, function(char) {
+  value <- paste0(vapply(chars, function(char) {
     if (char %in% names(replacements)) replacements[[char]] else char
   }, character(1)), collapse = "")
+  for (token in names(tokens)) {
+    value <- gsub(token, tokens[[token]], value, fixed = TRUE)
+  }
+  value
 }
 
 escape_html <- function(value) {
@@ -30,6 +52,44 @@ escape_html <- function(value) {
 
 tex_to_html <- function(value) {
   tokens <- character()
+  markdown_formats <- c(
+    "\\*\\*([^*]+)\\*\\*" = "strong",
+    "\\*([^*]+)\\*" = "em"
+  )
+  for (pattern in names(markdown_formats)) {
+    matches <- gregexpr(pattern, value, perl = TRUE)
+    found <- regmatches(value, matches)[[1]]
+    if (length(found) == 0L || identical(found, character(0))) {
+      next
+    }
+
+    replaced <- vapply(found, function(match) {
+      content <- sub(pattern, "\\1", match, perl = TRUE)
+      tag <- markdown_formats[[pattern]]
+      token <- sprintf("CVFMT%04dTOKEN", length(tokens) + 1L)
+      tokens[token] <<- paste0(
+        "<", tag, ">",
+        escape_html(content),
+        "</", tag, ">"
+      )
+      token
+    }, character(1))
+    regmatches(value, matches) <- list(replaced)
+  }
+
+  math_pattern <- "\\$\\^([^$]+)\\$"
+  math_matches <- gregexpr(math_pattern, value, perl = TRUE)
+  math_found <- regmatches(value, math_matches)[[1]]
+  if (length(math_found) > 0L && !identical(math_found, character(0))) {
+    replaced <- vapply(math_found, function(match) {
+      content <- sub(math_pattern, "\\1", match, perl = TRUE)
+      token <- sprintf("CVFMT%04dTOKEN", length(tokens) + 1L)
+      tokens[token] <<- paste0("<sup>", escape_html(content), "</sup>")
+      token
+    }, character(1))
+    regmatches(value, math_matches) <- list(replaced)
+  }
+
   formats <- c(
     textbf = "strong",
     textit = "em",
@@ -71,7 +131,7 @@ tex_to_html <- function(value) {
 }
 
 cv_entries <- function(data, with, when = NULL, what = NULL,
-                       where = NULL, why = NULL, .protect = TRUE) {
+                       where = NULL, why = NULL, .protect = FALSE) {
   if (!is.data.frame(data)) {
     stop("`data` must be a data frame.", call. = FALSE)
   }
@@ -118,9 +178,9 @@ cv_entries <- function(data, with, when = NULL, what = NULL,
   is_latex <- knitr::is_latex_output()
   format_value <- function(value) {
     if (is_latex) {
-      if (.protect) escape_tex(value) else value
+      escape_tex(value)
     } else {
-      if (.protect) escape_html(value) else tex_to_html(value)
+      tex_to_html(value)
     }
   }
 
