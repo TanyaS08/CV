@@ -83,4 +83,8 @@ if (!knitr::is_latex_output()) cv_html_header(params$cv)
 
 {{< include sections/collaborative-projects.qmd >}}
 
+{{< include sections/presentations.qmd >}}
+
+{{< include sections/teaching.qmd >}}
+
 {{< include sections/science-outreach.qmd >}}
