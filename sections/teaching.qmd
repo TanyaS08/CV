@@ -27,7 +27,7 @@ cv_entries(invited , with = "Title", when = "Year",
 
 materials <- tribble(
   ~ Title, ~Content, ~ Year, ~ Where,
-  "(un)Reproducibility Detox - Package and Dependency Management","Gracielle Higino,\\textbf{Tanya Strydom}", "Nov., 2021", "BIOS$^2$"
+  "(un)Reproducibility Detox - Package and Dependency Management","G. Higino, \\textbf{T. Strydom}", "Nov., 2021", "BIOS$^2$"
 )
 
 cv_entries(materials , with = "Title", when = "Year",

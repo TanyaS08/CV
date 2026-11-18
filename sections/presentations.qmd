@@ -8,8 +8,8 @@
 
 workshops <- tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
-  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","Francis Banville, Gabriel Dansereau, *Tanya Strydom*",
-  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","Gracielle Higino, Mickey Boakye, Norma Forero, *Tanya Strydom*"
+  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","F. Banville, G. Dansereau, \\textbf{T. Strydom}",
+  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","G. Higino, M. Boakye, N. Forero, \\textbf{T. Strydom}"
 )
 
 cv_entries(workshops, with = "Title", when = "Year",
@@ -25,12 +25,12 @@ cv_entries(workshops, with = "Title", when = "Year",
 
 invites <- tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
-    "Take a Byte: How the (En)Codification of Food Webs Impacts Inference","Oct., 2026", "Theoretical Ecology Seminar Series", "*Tanya Strydom*",
-    "How do you Reconstruct a Food Web that Died 200 million Years Ago?","Oct., 2026", "Yorkshire Geological Society", "*Tanya Strydom*",
-    "The Risks and Rewards of Large Language Models in (Open) Scientific Research","Oct., 2025", "SORTEE", "*Tanya Strydom*",
-    "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "*Tanya Strydom*",
-  "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "*Tanya Strydom*",
- "Taking FAIR and open science to the field: The evolution of the PFTC field course","Oct., 2020", "Living Norway Colloquium", "*Tanya Strydom* alongside Aud H. Halbritter, 109 PFTC Participants",
+    "Take a Byte: How the (En)Codification of Food Webs Impacts Inference","Oct., 2026", "Theoretical Ecology Seminar Series", "\\textbf{T. Strydom}",
+    "How do you Reconstruct a Food Web that Died 200 million Years Ago?","Oct., 2026", "Yorkshire Geological Society", "\\textbf{T. Strydom}",
+    "The Risks and Rewards of Large Language Models in (Open) Scientific Research","Oct., 2025", "SORTEE", "\\textbf{T. Strydom}",
+    "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "\\textbf{T. Strydom}",
+  "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "\\textbf{T. Strydom}",
+ "Taking FAIR and open science to the field: The evolution of the PFTC field course","Oct., 2020", "Living Norway Colloquium", "\\textbf{T. Strydom} alongside A.H. Halbritter, 109 PFTC Participants",
 )
 
 cv_entries(invites, with = "Title", when = "Year",
@@ -46,8 +46,8 @@ cv_entries(invites, with = "Title", when = "Year",
 
 talks <- tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
-  "It's okay to be different: Understanding how and why network construction matters", "July, 2025", "4th CPEG Symposium", "\textbf{Tanya Strydom}",
-  "Exploring the complexity of ecological networks using SVD entropy", "Dec., 2020", "11th Annual QCBS Symposium", "\textbf{Tanya Strydom}, Giulio V. Dalla Riva and Timothée Poisot",
+  "It's okay to be different: Understanding how and why network construction matters", "July, 2025", "4th CPEG Symposium", "\\textbf{T. Strydom}",
+  "Exploring the complexity of ecological networks using SVD entropy", "Dec., 2020", "11th Annual QCBS Symposium", "\\textbf{T. Strydom}, G.V. Dalla Riva and T. Poisot",
 )
 
 cv_entries(talks, with = "Title", when = "Year",
@@ -64,10 +64,10 @@ cv_entries(talks, with = "Title", when = "Year",
 presentations <- tribble(
   ~ Title, ~ Year, ~ Conference, ~ Who,
   # BES poster
-  "The Nuances of Food Webs: An Overview of Definitions, Scales, and Mechanisms", "Dec., 2024", "BES Annual Meeting", "\\textbf{Tanya Strydom}, Jennifer Dunne, Timothée Poisot and Andrew P. Beckerman",
+  "The Nuances of Food Webs: An Overview of Definitions, Scales, and Mechanisms", "Dec., 2024", "BES Annual Meeting", "\\textbf{T. Strydom}, J. Dunne, T. Poisot and A.P. Beckerman",
   #QCBS POSTER
-  "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
-  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
+  "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{T. Strydom}, S. Bouskila and T. Poisot",
+  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{T. Strydom}, S. Bouskila and T. Poisot",
 )
 
 cv_entries(presentations, with = "Title", when = "Year",

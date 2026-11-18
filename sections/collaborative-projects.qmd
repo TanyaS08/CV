@@ -9,7 +9,7 @@ projects <- tribble(
   # Metaweb2
   "Metaweb2","PIs: Merin Reji Chacko", NA, "2026",
   # Macro-Micro
-  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and **T. Strydom**",NA, "2022",
+  "Black Holes and Revelations: Identifying Priority Sampling Locations for Local Food Webs in Canada","PIs: F. Banville, M. Catchen, G. Dansereau, and \\textbf{T. Strydom}",NA, "2022",
   # Macro-Micro
   "Merging Statistical Theory and Analyses at the Interface of Microbial and ‘Macrobial’ Ecology","PIs: M. Liebold, P. Peres-Neto, and E. Thebault ",NA, "2022",
   # CAN metaweb
