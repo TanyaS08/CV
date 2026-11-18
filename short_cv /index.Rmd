@@ -73,7 +73,7 @@ My research develops a theory of ecological inference for complex systems. I inv
 
 * *2014-17* - **Bachelor of Science in Ecology and Plant Sciences**, University of Pretoria, South Africa
 
-# \faIcon{award} Funding and Awards
+# \faIcon{award} Awards
 
 * *2022* - **Robert May Prize**, British Ecological Society
 
@@ -94,126 +94,18 @@ vitae::bibliography_entries("../bib/CopyOfjournal.bib")
 bibliography_entries("../bib/preprint.bib")
 ```
 
-\newpage
-
 # \faIcon{code} Research Software
 
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-library(tibble)
-tribble(
-  ~ Name, ~ Language, ~ Description, ~ DOI,
-  "pfwim.R", "CRAN v1.0.2", "Paleo food web inference model", "R",
-  "SpatialBoundaries.jl", "v0.2.0", "Edge detection using spatial wombling", "Julia",
-  "FoodWebTools.jl", "v0.1beta", "Tools for building and measuring networks", "Julia",
-  "Extinctions.jl", "v0.1beta", "Extinction simulations of food webs", "Julia",
-  #"pfim.jl", "v0.0.2", "Paleo food web inference model", "Julia",
-) %>%
-  detailed_entries(with = Name, 
-                   when = Language, 
-                   what = Description, 
-                   where = DOI,
-                   .protect = FALSE)
-```
+* `pfwim.R` - Paleo food web inference model, *CRAN v1.0.2*
 
-\newpage
-
-# \faIcon{chalkboard-teacher} Presentations
-
-\vspace{\baselineskip}
-
-## **Workshops and Organised Sessions**
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~ Title, ~ Year, ~ Conference, ~ Who,
-  "Space Oddity: Thinking About Ecological Networks Across Space", "Aug., 2022", "ESA/CSEE Meeting","Francis Banville, Gabriel Dansereau, \\textbf{Tanya Strydom}",
-  "Designing a collective prototype of future tropical and subtropical science", "Jul., 2021", "ATBC Annual Meeting","Gracielle Higino, Mickey Boakye, Norma Forero, \\textbf{Tanya Strydom}"
-) %>%
-  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
-    .protect = FALSE)
-
-```
-
-\vspace{\baselineskip}
-
-## **Invited talks and seminars**
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~ Title, ~ Year, ~ Conference, ~ Who,
-    "Take a Byte: How the (En)Codification of Food Webs Impacts Inference","Oct., 2026", "Theoretical Ecology Seminar Series", "\\textbf{Tanya Strydom}",
-    "How do you Reconstruct a Food Web that Died 200 million Years Ago?","Oct., 2026", "Yorkshire Geological Society", "\\textbf{Tanya Strydom}",
-    "The Risks and Rewards of Large Language Models in (Open) Scientific Research","Oct., 2025", "SORTEE", "\\textbf{Tanya Strydom}",
-    "What's [complexity] got to do with it?","Jul., 2023", "NetSci 2023", "\\textbf{Tanya Strydom}",
-  "Making something out of nothing at all: Transfer learning for network prediction","Apr., 2022", "ML4MS mini-conference", "\\textbf{Tanya Strydom}",
- "Taking FAIR and open science to the field: The evolution of the PFTC field course","Oct., 2020", "Living Norway Colloquium", "\\textbf{Tanya Strydom} alongside Aud H. Halbritter, 109 PFTC Participants",
-) %>%
-  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
-    .protect = FALSE)
-
-```
-\vspace{\baselineskip}
-
-## **Talks**
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~ Title, ~ Year, ~ Conference, ~ Who,
-  "It's okay to be different: Understanding how and why network construction matters", "July, 2025", "4th CPEG Symposium", "\\textbf{Tanya Strydom}",
-  "Exploring the complexity of ecological networks using SVD entropy", "Dec., 2020", "11th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Giulio V. Dalla Riva and Timothée Poisot",
-) %>%
-  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
-    .protect = FALSE)
-
-```
-
-\vspace{\baselineskip}
-
-## **Short Presentations and Posters**
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
-
-tribble(
-  ~ Title, ~ Year, ~ Conference, ~ Who,
-  # BES poster
-  "The Nuances of Food Webs: An Overview of Definitions, Scales, and Mechanisms", "Dec., 2024", "BES Annual Meeting", "\\textbf{Tanya Strydom}, Jennifer Dunne, Timothée Poisot and Andrew P. Beckerman",
-  #QCBS POSTER
-  "Food web reconstruction using transfer learning", "Dec., 2021", "12th Annual QCBS Symposium", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
-  "Reconstructing food webs using transfer learning", "Aug., 2021", "CSEE-SCEE Annual Meeting", "\\textbf{Tanya Strydom}, Salomé Bouskila and Timothée Poisot",
-) %>%
-  detailed_entries(with=Title, when=Year, what=Who, where=Conference,
-    .protect = FALSE)
-
-```
-
+* `SpatialBoundaries.jl` - Edge detection using spatial wombling, *v0.2.0*
 
 # \faIcon{comments} Science Communication & Outreach
-\vspace{\baselineskip}
-## **Scientific outreach**
 
-```{r, echo=FALSE, message = FALSE, warning = FALSE, results='asis'}
+* *2020 - 2022* - **Cartoonist**, Fortnightly cartoonist for Ecology for the Masses blog
 
-tribble(
-  ~Institution, ~Title, ~Year,
-  "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
-  "Q&A sessions with school groups",  "Skype a Scientist", "2024 - Present",
-  "Pen pal programme with school students",  "Letters to a PreScientist", "2025 - Present",
-) %>%
-  detailed_entries(
-    what = Institution,
-    with = Title,
-    when = Year
-  )
+* *2024 - Present* - **Skype a Scientist** Q&A sessions with school groups
 
-```
-\vspace{\baselineskip}
-## **Popular Articles**
-
-```{r}
-bibliography_entries("../bib/popular_articles.bib")
-```
+* *2025 - Present* - **Letters to a PreScientist**, Pen pal programme with school students
 
 <!--chapter:end:CV.Rmd-->
