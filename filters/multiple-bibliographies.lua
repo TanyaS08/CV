@@ -88,7 +88,7 @@ local function create_topic_bibliography (div)
   })
   div.attributes = {
     ['data-entry-spacing'] = '0',
-    ['data-line-spacing'] = '2'
+    ['data-line-spacing'] = '1'
   }
   return div
 end

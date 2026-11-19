@@ -1,2 +1,5 @@
 \renewcommand{\maketitle}{\makecvheader}
 \AtBeginDocument{\hypersetup{hidelinks,colorlinks=false,allcolors=black}}
+\usepackage{etoolbox}
+\apptocmd{\CSLReferences}{\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}}{}{}
+\pretocmd{\subsection}{\vspace{\baselineskip}}{}{}
