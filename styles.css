@@ -17,6 +17,23 @@ h2 {
   font-weight: 700;
 }
 
+h2 {
+  margin-top: 1.0rem;
+}
+
+.hero-container {
+  background-color: #212322;
+  background-image: url("assets/interests.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 52vh;
+  margin: 0 0 1.5rem;
+  max-height: 52vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .quarto-title-block .title {
   color: #414141;
 }
