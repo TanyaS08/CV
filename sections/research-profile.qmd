@@ -1,0 +1,3 @@
+# `r cv_section_icon("lightbulb")` Research Profile
+
+My research develops a theory of ecological inference for complex systems. I investigate how ecological representations capture, distort, and constrain our understanding of biodiversity. By combining ecological theory, network science, machine learning, and complexity science, I study how interactions emerge across scales, the propagation of uncertainty through ecological analyses, and what can ultimately be inferred and predicted about ecological systems from incomplete observations. My work aims to transform ecological networks from descriptive summaries into rigorous, predictive tools for biodiversity science and decision-making.

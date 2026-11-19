@@ -1,0 +1,20 @@
+# `r cv_section_icon("chalkboard")` Fellowships and Internships
+
+```{r internships}
+#| echo: false
+#| results: asis
+
+internships <- tribble(
+  ~Institution, ~Title, ~Year, ~Job,
+    
+  'Computational Biodiversity Science and Services  (BIOS\\textsuperscript{2}) training program',  "BIOS\\textsuperscript{2} Fellow", "2021-23", NA,
+  # LIVING DATA
+  "Canadian Institute of Ecology and Evolution, Birds Canada", "Living Data Internship", "2022", "Data archiving for the Piping Plovers conservation pjoject",
+  'University of Bergen',  "UiB Internship", "2020", "Website development for the Plants Functional Courses website. This included content creation as well as some front end development",
+  'University of Pretoria',  "3rd year Undergraduate Mentorship Program", "2016", "Worked as an assistant within the M. Robertson lab. This included the sorting and identification of pitfall trap samples as well as extracting information from databases"
+) 
+
+cv_entries(internships, with = "Title", when = "Year",
+           what = "Job", where = "Institution")
+
+```

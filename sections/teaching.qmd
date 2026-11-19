@@ -1,0 +1,36 @@
+# `r cv_section_icon("chalkboard")` Teaching
+
+## Invited Lectures
+
+```{r teaching}
+#| echo: false
+#| results: asis
+
+invited <- tribble(
+  ~ Title, ~Class, ~ Year, ~ Where,
+  "Species Interaction Networks: A Macro-level Overview","Community Ecology", "2025 - Present", "Univerity of South Florida"
+)
+
+cv_entries(invited , with = "Title", when = "Year",
+           what = "Class", where = "Where")
+
+```
+
+\vspace{\baselineskip}
+## Teaching Materials
+
+```{r materials}
+#| echo: false
+#| results: asis
+
+# link: https://reprodetox.netlify.app
+
+materials <- tribble(
+  ~ Title, ~Content, ~ Year, ~ Where,
+  "(un)Reproducibility Detox - Package and Dependency Management","G. Higino, \\textbf{T. Strydom}", "Nov., 2021", "BIOS$^2$"
+)
+
+cv_entries(materials , with = "Title", when = "Year",
+           what = "Content", where = "Where")
+
+```

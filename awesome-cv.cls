@@ -74,8 +74,6 @@
 \RequirePackage[quiet]{fontspec}
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
-% Needed to manage math fonts
-\RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \defaultfontfeatures{Extension = .otf}
@@ -90,6 +88,7 @@
 \RequirePackage{parskip}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
+\RequirePackage{lastpage}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
@@ -153,7 +152,7 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-skyblue}
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
@@ -328,7 +327,7 @@
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
 % Usage: \twitter{<twitter handle>}
-\newcommand*{\twitter}[1]{\def\@twitter{#1}}
+\newcommand*{\bluesky}[1]{\def\@bluesky{#1}}
 
 % Defines writer's skype (optional)
 % Usage: \skype{<skype account>}
@@ -460,7 +459,7 @@
     \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
-    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
+    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\faMapMarker\acvHeaderIconSep\@address\\[\acvHeaderAfterAddressSkip]}}%
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
@@ -549,11 +548,11 @@
             \newline
             \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
           }%
-        \ifthenelse{\isundefined{\@twitter}}%
+        \ifthenelse{\isundefined{\@bluesky}}%
           {}%
           {%
             \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-            \href{https://ecoevo.social/@\@twitter}{\faMastodon\acvHeaderIconSep\@twitter}%
+            \href{https://bsky.app/profile/\@bluesky}{\includegraphics[height=0.8em]{includes/generated-bluesky.pdf}\acvHeaderIconSep\@bluesky}%
           }%
         \ifthenelse{\isundefined{\@xing}}%
         {}%

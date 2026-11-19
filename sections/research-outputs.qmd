@@ -1,0 +1,18 @@
+# `r cv_section_icon("file-alt")` Research Outputs
+
+## Publications
+
+*An asterisk indicates co-lead authorship.*
+
+::: {#refs-publications}
+:::
+
+## Preprints
+
+::: {#refs-preprints}
+:::
+
+## Archived datasets
+
+::: {#refs-archived}
+:::

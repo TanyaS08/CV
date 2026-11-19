@@ -1,0 +1,17 @@
+# `r cv_section_icon("graduation-cap")` Education
+
+```{r eduaction}
+#| echo: false
+#| results: asis
+
+education <- tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Doctor of Philosophy in Biological Sciences", "2020-24", "Université de Montréal", "Montréal, Canada",
+  "Master of Science in Ecology and Biodiversity", "2018-20", "Stockholms Universitet", "Stockholm, Sweden",
+  "Bachelor of Science (Honours) in Plant Sciences", "2017", "University of Pretoria", "Pretoria, South Africa",
+  "Bachelor of Science in Ecology", "2014-16", "University of Pretoria", "Pretoria, South Africa"
+) 
+
+cv_entries(education, with = "Degree", when = "Year",
+           what = "Institution", where = "Where")
+```

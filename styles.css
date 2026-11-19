@@ -1,0 +1,119 @@
+body {
+  color: #212322;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+h1,
+h2 {
+  color: var(--cv-accent);
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 1.0rem;
+}
+
+.hero-container {
+  background-color: #212322;
+  background-image: url("assets/interests.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 52vh;
+  margin: 0 0 1.5rem;
+  max-height: 52vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.quarto-title-block .title {
+  color: #414141;
+}
+
+.quarto-title-block .subtitle {
+  color: var(--cv-accent);
+}
+
+.cv-profile {
+  align-items: flex-start;
+  display: flex;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+.cv-profile img {
+  border-radius: 50%;
+  height: 5rem;
+  object-fit: cover;
+  width: 5rem;
+}
+
+.cv-profile-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.cv-profile-item a,
+.cv-profile-item > span {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  gap: 0.35rem;
+  text-decoration: none;
+}
+
+.cv-profile-item svg {
+  color: var(--cv-accent);
+  flex: 0 0 auto;
+}
+
+.cv-entries {
+  margin: 1rem 0;
+}
+
+.cv-entry {
+  margin-bottom: 1rem;
+}
+
+.cv-entry-main,
+.cv-entry-details {
+  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.cv-entry-main strong {
+  color: #414141;
+}
+
+.cv-entry-main span {
+  color: var(--cv-accent);
+  font-style: italic;
+  text-align: right;
+}
+
+.cv-entry-details {
+  color: #5d5d5d;
+  font-size: 0.73em;
+  font-variant: small-caps;
+}
+
+.cv-entry-details em {
+  font-style: italic;
+  font-variant: normal;
+  text-align: right;
+}
+
+.cv-entry-notes {
+  margin: 0.25rem 0 0;
+  padding-left: 1.5rem;
+}

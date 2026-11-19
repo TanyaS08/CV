@@ -1,0 +1,90 @@
+---
+title: "Tanya Strydom"
+subtitle: "Postdoctoral Research Associate"
+csl: csl/apa.csl
+bibliography:
+  - bib/journal.bib
+  - bib/preprint.bib
+  - bib/archived_data.bib
+  - bib/popular_articles.bib
+cv-bibliographies:
+  publications: bib/journal.bib
+  preprints: bib/preprint.bib
+  archived: bib/archived_data.bib
+  popular: bib/popular_articles.bib
+nocite: "@*"
+suppress-bibliography: true
+filters:
+  - filters/multiple-bibliographies.lua
+  - lua/strong.lua
+params:
+  cv:
+    value:
+      first_name: "Tanya"
+      last_name: "Strydom"
+      position: "Postdoctoral Research Associate"
+      address: "Ecology and Evolutionary Biology, School of Biosciences, University of Sheffield"
+      photo: "assets/logo.png"
+      pronouns: "she/they"
+      email: "t.strydom@sheffield.ac.uk"
+      homepage: "tanyadoesscience.com"
+      github: "TanyaS08"
+      orcid: "0000-0001-6067-1349"
+      bluesky: "tanyadoesscience.bsky.social"
+      accent_color: "#5E53A6"
+      footer_date_format: "%B %Y"
+format:
+  html:
+    css:
+      - styles.css
+      - includes/generated-cv-theme.css
+    toc: false
+  pdf:
+    documentclass: awesome-cv
+    classoption:
+      - 11pt
+      - a4paper
+    pdf-engine: xelatex
+    include-in-header:
+      - includes/generated-cv-header.tex
+      - includes/awesome-cv-header.tex
+    toc: false
+---
+
+```{r}
+#| include: false
+
+source("R/cv-entries.R")
+source("R/cv-header.R")
+```
+
+```{r}
+#| echo: false
+#| results: asis
+
+if (!knitr::is_latex_output()) cv_html_header(params$cv)
+```
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{assets/interests.png}
+\end{figure}
+
+{{< include sections/research-profile.qmd >}}
+
+{{< include sections/professional-experience.qmd >}}
+
+{{< include sections/education.qmd >}}
+
+{{< include sections/funding.qmd >}}
+
+{{< include sections/research-outputs.qmd >}}
+
+{{< include sections/research-software.qmd >}}
+
+{{< include sections/collaborative-projects.qmd >}}
+
+{{< include sections/presentations.qmd >}}
+
+{{< include sections/teaching.qmd >}}
+
+{{< include sections/science-outreach.qmd >}}

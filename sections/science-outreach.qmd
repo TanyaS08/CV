@@ -1,0 +1,23 @@
+# `r cv_section_icon("comments")` Science Communication & Outreach
+
+## Scientific outreach
+
+```{r outreach}
+#| echo: false
+#| results: asis
+
+outreach <- tribble(
+  ~Institution, ~Title, ~Year,
+  "Fortnightly cartoonist for Ecology for the Masses blog",  "Cartoonist", "2020 - 2022",
+  "Q&A sessions with school groups",  "Skype a Scientist", "2024 - Present",
+  "Pen pal programme with school students",  "Letters to a PreScientist", "2025 - Present",
+)
+
+cv_entries(outreach, with = "Title", when = "Year",
+           what = "Institution")
+```
+
+## Popular Articles
+
+::: {#refs-popular}
+:::
